@@ -18,7 +18,7 @@ const SITE = {
        🏪 Site / Shop Name
        ------------------------------------------------------------------ */
 
-    name: 'CTG Mobile Tech',
+    name: '২২৮৮CTG Mobile Tech',
 
     tagline: 'Your Tech Destination',
 

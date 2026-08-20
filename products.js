@@ -5,7 +5,7 @@ const products = [
     {
         id: 1,
         name: 'iPhone 17 Pro Max',
-        cat: 'New iPhone',
+        cat: 'iPhone',
         type: 'new',
         brand: 'Apple',
         price: 189999,
@@ -22,19 +22,13 @@ const products = [
             condition: 'Brand New',
             battery: '100%',
             warranty: 'Official Warranty'
-        },
-        benefits: [
-            'Brand New & Sealed',
-            'Powerful flagship performance',
-            'Advanced camera system',
-            'Official warranty available'
-        ]
+        }
     },
 
     {
         id: 2,
         name: 'iPhone 16 Pro Max',
-        cat: 'New iPhone',
+        cat: 'iPhone',
         type: 'new',
         brand: 'Apple',
         price: 159999,
@@ -51,19 +45,13 @@ const products = [
             condition: 'Brand New',
             battery: '100%',
             warranty: 'Official Warranty'
-        },
-        benefits: [
-            'Brand New',
-            'Pro camera system',
-            'Premium titanium design',
-            'Warranty available'
-        ]
+        }
     },
 
     {
         id: 3,
         name: 'iPhone 15 Pro',
-        cat: 'New iPhone',
+        cat: 'iPhone',
         type: 'new',
         brand: 'Apple',
         price: 124999,
@@ -80,85 +68,38 @@ const products = [
             condition: 'Brand New',
             battery: '100%',
             warranty: 'Warranty Available'
-        },
-        benefits: [
-            'Brand New',
-            'Pro performance',
-            'Excellent camera',
-            'Premium build quality'
-        ]
+        }
+    },
+    {
+        id: 4,
+        name: 'iPhone 17 Pro',
+        cat: 'iPhone',
+        type: 'new',
+        brand: 'Apple',
+        price: 124999,
+        oldPrice: 134999,
+        img: 'https://i.ibb.co/zVd2tbcB/i3.jpg',
+        images: [
+            'https://i.ibb.co/zVd2tbcB/i3.jpg'
+        ],
+        desc: 'Powerful and stylish iPhone with Pro performance and advanced camera features.',
+        specs: {
+            storage: '128GB',
+            ram: '8GB',
+            color: 'Black Titanium',
+            condition: 'Brand New',
+            battery: '100%',
+            warranty: 'Warranty Available'
+        }
     },
 
-
     // =====================================================
-    // ♻️ USED IPHONE
+    // 🔵 GOOGLE PIXEL
     // =====================================================
     {
         id: 5,
-        name: 'iPhone 14 Pro Max',
-        cat: 'Used iPhone',
-        type: 'used',
-        brand: 'Apple',
-        price: 85000,
-        oldPrice: 95000,
-        img: 'https://i.ibb.co/fP85yFv/i1.jpg',
-        images: [
-            'https://i.ibb.co/fP85yFv/i1.jpg'
-        ],
-        desc: 'Used iPhone 14 Pro Max with excellent performance and battery health.',
-        specs: {
-            storage: '256GB',
-            ram: '6GB',
-            color: 'Deep Purple',
-            condition: 'Very Good',
-            battery: '92%',
-            warranty: '7 Days Checking Warranty'
-        },
-        benefits: [
-            'Fully Tested',
-            'Very Good Condition',
-            '92% Battery Health',
-            'Checking Warranty'
-        ]
-    },
-
-    {
-        id: 6,
-        name: 'iPhone 13 Pro Max',
-        cat: 'Used iPhone',
-        type: 'used',
-        brand: 'Apple',
-        price: 68000,
-        oldPrice: 75000,
-        img: 'https://images.unsplash.com/photo-1632661674596-df8be070a5c5?auto=format&fit=crop&w=800&q=80',
-        images: [
-            'https://images.unsplash.com/photo-1632661674596-df8be070a5c5?auto=format&fit=crop&w=800&q=80'
-        ],
-        desc: 'Reliable used iPhone with excellent performance and premium camera.',
-        specs: {
-            storage: '256GB',
-            ram: '6GB',
-            color: 'Sierra Blue',
-            condition: 'Very Good',
-            battery: '89%',
-            warranty: '7 Days Checking Warranty'
-        },
-        benefits: [
-            'Fully Tested',
-            'Good Battery Health',
-            'Excellent Camera',
-            'Checking Warranty'
-        ]
-    },
-
-
-    // =====================================================
-    // 🔵 NEW GOOGLE PIXEL
-    // =====================================================
-    {
-        id: 7,
         name: 'Google Pixel 10 Pro XL',
-        cat: 'New Google Pixel',
+        cat: 'Google Pixel',
         type: 'new',
         brand: 'Google',
         price: 119999,
@@ -175,19 +116,13 @@ const products = [
             condition: 'Brand New',
             battery: '100%',
             warranty: 'Warranty Available'
-        },
-        benefits: [
-            'Brand New',
-            'Google Tensor performance',
-            'Advanced AI features',
-            'Excellent Pixel Camera'
-        ]
+        }
     },
 
     {
-        id: 8,
+        id: 6,
         name: 'Google Pixel 9 Pro XL',
-        cat: 'New Google Pixel',
+        cat: 'Google Pixel',
         type: 'new',
         brand: 'Google',
         price: 99999,
@@ -204,23 +139,108 @@ const products = [
             condition: 'Brand New',
             battery: '100%',
             warranty: 'Warranty Available'
-        },
-        benefits: [
-            'Brand New',
-            'Google AI Features',
-            'Excellent Camera',
-            'Premium Display'
-        ]
+        }
+    },
+    {
+        id: 7,
+        name: 'Google Pixel 10 Pro XL',
+        cat: 'Google Pixel',
+        type: 'new',
+        brand: 'Google',
+        price: 119999,
+        oldPrice: 129999,
+        img: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80'
+        ],
+        desc: 'Premium Google Pixel smartphone with powerful AI features and advanced camera.',
+        specs: {
+            storage: '256GB',
+            ram: '16GB',
+            color: 'Obsidian',
+            condition: 'Brand New',
+            battery: '100%',
+            warranty: 'Warranty Available'
+        }
+    },
+
+    {
+        id: 8,
+        name: 'Google Pixel 9 Pro XL',
+        cat: 'Google Pixel',
+        type: 'new',
+        brand: 'Google',
+        price: 99999,
+        oldPrice: 109999,
+        img: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80'
+        ],
+        desc: 'Premium Pixel phone featuring Google AI, excellent camera and smooth performance.',
+        specs: {
+            storage: '256GB',
+            ram: '16GB',
+            color: 'Obsidian',
+            condition: 'Brand New',
+            battery: '100%',
+            warranty: 'Warranty Available'
+        }
     },
 
 
     // =====================================================
-    // ♻️ USED GOOGLE PIXEL
+    // ♻️ USED IPHONE
     // =====================================================
     {
         id: 9,
+        name: 'iPhone 14 Pro Max',
+        cat: 'Used Phone',
+        type: 'used',
+        brand: 'Apple',
+        price: 85000,
+        oldPrice: 95000,
+        img: 'https://i.ibb.co/fP85yFv/i1.jpg',
+        images: [
+            'https://i.ibb.co/fP85yFv/i1.jpg'
+        ],
+        desc: 'Used iPhone 14 Pro Max with excellent performance and battery health.',
+        specs: {
+            storage: '256GB',
+            ram: '6GB',
+            color: 'Deep Purple',
+            condition: 'Very Good',
+            battery: '92%',
+            warranty: '7 Days Checking Warranty'
+        }
+    },
+
+    {
+        id: 10,
+        name: 'iPhone 13 Pro Max',
+        cat: 'Used Phone',
+        type: 'used',
+        brand: 'Apple',
+        price: 68000,
+        oldPrice: 75000,
+        img: 'https://images.unsplash.com/photo-1632661674596-df8be070a5c5?auto=format&fit=crop&w=800&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1632661674596-df8be070a5c5?auto=format&fit=crop&w=800&q=80'
+        ],
+        desc: 'Reliable used iPhone with excellent performance and premium camera.',
+        specs: {
+            storage: '256GB',
+            ram: '6GB',
+            color: 'Sierra Blue',
+            condition: 'Very Good',
+            battery: '89%',
+            warranty: '7 Days Checking Warranty'
+        }
+    },
+
+    {
+        id: 11,
         name: 'Google Pixel 8 Pro',
-        cat: 'Used Google Pixel',
+        cat: 'Used Phone',
         type: 'used',
         brand: 'Google',
         price: 62000,
@@ -237,19 +257,13 @@ const products = [
             condition: 'Very Good',
             battery: '94%',
             warranty: '7 Days Checking Warranty'
-        },
-        benefits: [
-            'Fully Tested',
-            '94% Battery Health',
-            'Excellent Camera',
-            'Checking Warranty'
-        ]
+        }
     },
 
     {
-        id: 10,
+        id: 12,
         name: 'Google Pixel 7 Pro',
-        cat: 'Used Google Pixel',
+        cat: 'Used Phone',
         type: 'used',
         brand: 'Google',
         price: 45000,
@@ -266,21 +280,14 @@ const products = [
             condition: 'Good',
             battery: '90%',
             warranty: '7 Days Checking Warranty'
-        },
-        benefits: [
-            'Fully Tested',
-            '90% Battery Health',
-            'Great Camera',
-            'Checking Warranty'
-        ]
+        }
     },
-
 
     // =====================================================
     // 🔌 ACCESSORIES
     // =====================================================
     {
-        id: 11,
+        id: 13,
         name: 'Apple 20W USB-C Power Adapter',
         cat: 'Accessories',
         type: 'accessory',
@@ -297,17 +304,11 @@ const products = [
             connector: 'USB-C',
             condition: 'Brand New',
             warranty: 'Warranty Available'
-        },
-        benefits: [
-            'Fast Charging',
-            'Compact Design',
-            'USB-C Support',
-            'Easy to Carry'
-        ]
+        }
     },
 
     {
-        id: 13,
+        id: 14,
         name: 'Premium MagSafe Case',
         cat: 'Accessories',
         type: 'accessory',
@@ -324,17 +325,11 @@ const products = [
             material: 'Premium Silicone',
             condition: 'Brand New',
             warranty: 'No Warranty'
-        },
-        benefits: [
-            'Premium Protection',
-            'MagSafe Compatible',
-            'Slim Design',
-            'Stylish Look'
-        ]
+        }
     },
 
     {
-        id: 14,
+        id: 15,
         name: 'Wireless Earbuds',
         cat: 'Accessories',
         type: 'accessory',
@@ -351,41 +346,56 @@ const products = [
             connectivity: 'Bluetooth',
             condition: 'Brand New',
             warranty: '7 Days'
-        },
-        benefits: [
-            'Wireless Connectivity',
-            'Clear Sound',
-            'Compact Design',
-            'Comfortable Fit'
-        ]
+        }
+    },
+    
+    {
+        id: 16,
+        name: 'Wireless Earbuds',
+        cat: 'Accessories',
+        type: 'accessory',
+        brand: 'Premium',
+        price: 1800,
+        oldPrice: 2500,
+        img: 'https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80'
+        ],
+        desc: 'Compact wireless earbuds with clear sound and comfortable fit.',
+        specs: {
+            type: 'Wireless Earbuds',
+            connectivity: 'Bluetooth',
+            condition: 'Brand New',
+            warranty: '7 Days'
+        }
     }
+
 ];
 
 
 // =====================================================
 // 📂 CATEGORIES
 // =====================================================
-
 const categories = [
     {
-        id: 'New iPhone',
+        id: 'iPhone',
         icon: '🍎',
-        label: 'New iPhone'
+        label: 'iPhone'
     },
     {
-        id: 'Used iPhone',
-        icon: '♻️',
-        label: 'Used iPhone'
-    },
-    {
-        id: 'New Google Pixel',
+        id: 'Google Pixel',
         icon: '🔵',
-        label: 'New Pixel'
+        label: 'Google Pixel'
     },
     {
-        id: 'Used Google Pixel',
+        id: 'Used Phone',
         icon: '♻️',
-        label: 'Used Pixel'
+        label: 'Used Phone'
+    },
+    {
+        id: 'Others Phone',
+        icon: '📱',
+        label: 'Others Phone'
     },
     {
         id: 'Accessories',

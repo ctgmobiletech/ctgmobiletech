@@ -7,6 +7,14 @@
 <title>CTGMobileTech</title>
 <link rel="icon" type="image/png" id="favicon" href="https://i.ibb.co/ksf8P1M2/b67ccab4-452e-4caf-bf30-b7855ce94251.png">
 <style>
+/* ================================================================
+   CSS SECTION MAP
+   TOP BAR  : .site-top, .top-bar, .navbar, .mobile-nav
+   BANNER   : .banner-container, .main-banner
+   BODY     : .container, .categories-section, .product-grid, .detail-page
+   FOOTER   : footer, .footer-content, .footer-column, .footer-bottom
+   SYSTEM   : .overlay, .drawer, .checkout-overlay, .checkout-modal
+   ================================================================ */
     * {
         margin: 0;
         padding: 0;
@@ -49,7 +57,7 @@
     }
 
     .top-bar-info span { margin-right: 15px; }
-    .top-bar-info a { color: #ffb74d; text-decoration: none; }
+    .top-bar-info a { color: #fff; text-decoration: none; }
 
     .site-top {
         position: sticky;
@@ -440,6 +448,18 @@
     .footer-column a { color: #ccc; }
     .footer-column a:hover { color: var(--primary-orange); }
 
+    /* Contact Info: wrapped lines stay aligned with the first line's text */
+    #footerContactList li {
+        display: flex;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    #footerContactList li a {
+        flex: 1;
+        min-width: 0;
+    }
+
     .footer-bottom {
         text-align: center;
         padding-top: 1.5rem;
@@ -783,6 +803,10 @@
 </head>
 <body>
 
+<!-- ================================================================
+     ① TOP BAR — HTML
+     ================================================================ -->
+
 <div class="site-top">
     <div class="top-bar">
         <div class="top-bar-info" id="topBarInfo"></div>
@@ -825,10 +849,17 @@
     </header>
 </div>
 
+<!-- ================================================================
+     ② BANNER — HTML
+     ================================================================ -->
 <div class="banner-container" id="homeSections">
     <img id="bannerImg" alt="Projapoti Banner" class="main-banner">
 </div>
 
+<!-- ================================================================
+     ③ BODY — HTML
+     Product Details + Categories + Products
+     ================================================================ -->
 <div class="container">
 
     <!-- Product Details (landing page style) -->
@@ -877,6 +908,9 @@
     </div>
 </div>
 
+<!-- ================================================================
+     ④ FOOTER — HTML
+     ================================================================ -->
 <footer id="contact">
     <div class="footer-content">
         <div class="footer-column">
@@ -901,6 +935,10 @@
     </div>
 </footer>
 
+<!-- ================================================================
+     ⑤ SYSTEM — HTML
+     Cart + Checkout
+     ================================================================ -->
 <div class="overlay" id="overlay"></div>
 <div class="drawer" id="drawer">
     <div class="drawer-head">
@@ -921,12 +959,69 @@
     <div class="modal" id="checkoutModal"></div>
 </div>
 
-<script src="site-common.js"></script>
+<script>
+// Common site information merged into this page.
+const SITE = {
+    name: 'CTG Mobile Tech',
+    tagline: 'Your Tech Destination',
+    phone: '01627710145',
+    email: 'ctgmobiletech145@gmail.com',
+    address: 'Shop No: 536, Level 5, Finlay South City, Bahaddarhat, Chittagong.',
+    mapLink: 'https://maps.app.goo.gl/9mEKVqTqdECTJygZ9',
+    facebook: 'https://www.facebook.com/ctgmobiletech',
+    logoImg: 'https://i.ibb.co/ksf8P1M2/b67ccab4-452e-4caf-bf30-b7855ce94251.png',
+    bannerImg: 'https://i.ibb.co/pv8mHNp3/2.png',
+    deliveryCharge: 120,
+    web3formsKey: '038246c3-6489-499a-babe-6885836e714e'
+};
+
+function renderSiteInfo() {
+    const setText = (id, value) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+    };
+    const setHTML = (id, value) => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = value;
+    };
+    const setSrc = (id, value) => {
+        const el = document.getElementById(id);
+        if (el) el.src = value;
+    };
+
+    setText('brandName', SITE.name);
+    setText('brandTagline', SITE.tagline);
+    setText('footerBrandName', SITE.name);
+    setText('footerTagline', `"${SITE.tagline}"`);
+    setText('copyrightText', `© 2026 ${SITE.name} — All rights reserved.`);
+    setSrc('bannerImg', SITE.bannerImg);
+
+    const favicon = document.getElementById('favicon');
+    if (favicon) favicon.href = SITE.logoImg;
+
+    setHTML('topBarInfo', `
+        <span>📞 <a href="tel:${SITE.phone}">${SITE.phone}</a></span>
+        <span>✉️ <a href="mailto:${SITE.email}">${SITE.email}</a></span>
+    `);
+
+    setHTML('footerContactList', `
+        <li>📞 <strong>Call:</strong> <a href="tel:${SITE.phone}">${SITE.phone}</a></li>
+        <li>✉️ <strong>Email:</strong> <a href="mailto:${SITE.email}">${SITE.email}</a></li>
+        <li>📍 <strong>Address:</strong> <a href="${SITE.mapLink}" target="_blank" rel="noopener noreferrer">${SITE.address}</a></li>
+        <li>📘 <strong>Facebook:</strong> <a href="${SITE.facebook}" target="_blank" rel="noopener noreferrer">Visit Page</a></li>
+    `);
+
+    document.title = `${SITE.name} — ${SITE.tagline}`;
+}
+</script>
+<!-- ================================================================
+     PRODUCTS DATA — আলাদা products.js ফাইল
+     ================================================================ -->
 <script src="products.js"></script>
 <script>
 /* ======================================================================
    Page-specific data
-   (Shop name, phone, email, banner are in site-common.js;
+   (Shop name, phone, email, banner are defined above in this file;
    products and categories are in products.js.
    To add a new product, you don't need to touch this index.html file —
    just open products.js.)
@@ -943,7 +1038,7 @@ const paymentMethods = [
    Site logic below this point — no need to change anything here
    ====================================================================== */
 
-// For showing the category list in this page's footer (site-common.js doesn't
+// For showing the category list in this page's footer (this file doesn't
 // know this, since categories are this page's own data)
 function renderFooterCategories() {
     document.title = `${SITE.name} — ${SITE.tagline}`;
@@ -998,6 +1093,9 @@ function productCardHTML(p) {
         </div>`;
 }
 
+/* ================================================================
+   BODY JS — Products + Categories + Product Details
+   ================================================================ */
 function renderProducts() {
     const grid = document.getElementById('productGrid');
 
@@ -1194,6 +1292,9 @@ document.getElementById('detailBuyBtn').addEventListener('click', () => {
     openCheckout();
 });
 
+/* ================================================================
+   TOP BAR JS — Mobile Menu + Cart Toggle
+   ================================================================ */
 const menuToggle = document.getElementById('menuToggle');
 const mobileNav = document.getElementById('mobileNav');
 menuToggle.addEventListener('click', () => {
@@ -1439,6 +1540,9 @@ function showOrderConfirmation(orderId) {
     });
 }
 
+/* ================================================================
+   FOOTER JS — Footer information
+   ================================================================ */
 renderSiteInfo();
 renderFooterCategories();
 renderCategories();

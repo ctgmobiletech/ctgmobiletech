@@ -407,6 +407,105 @@
     .btn-buy, .btn-details { background: var(--gradient-main); }
     .btn-add.added { opacity: 0.7; }
 
+    /* Happy Customers (Testimonials) */
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .testimonial-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.6rem 1.3rem 1.3rem;
+        border: 1px solid #eee;
+        text-align: center;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .testimonial-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--light-bg);
+        box-shadow: 0 0 0 2px var(--primary-pink);
+        margin-bottom: 0.8rem;
+    }
+
+    .testimonial-stars {
+        color: var(--primary-orange);
+        font-size: 0.95rem;
+        letter-spacing: 2px;
+        margin-bottom: 0.6rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        flex-grow: 1;
+    }
+
+    .testimonial-name {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--primary-purple);
+    }
+
+    /* Our Videos (Facebook Videos/Reels) */
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .video-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #eee;
+        transition: 0.3s;
+    }
+
+    .video-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .video-embed-wrap {
+        position: relative;
+        width: 100%;
+        padding-top: 177.7%; /* 9:16 vertical video/reel ratio */
+        background: #000;
+    }
+
+    .video-embed-wrap iframe {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .video-caption {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+        color: #555;
+        text-align: center;
+    }
+
     .empty-msg {
         text-align: center;
         padding: 3rem 1rem;
@@ -905,6 +1004,16 @@
             <h2 class="section-title">Our Products</h2>
             <div class="product-grid" id="productGrid"></div>
         </div>
+
+        <div id="testimonials" style="margin-top: 3rem;">
+            <h2 class="section-title">Happy Customers</h2>
+            <div class="testimonial-grid" id="testimonialGrid"></div>
+        </div>
+
+        <div id="videos" style="margin-top: 3rem;">
+            <h2 class="section-title">Our Videos</h2>
+            <div class="video-grid" id="videoGrid"></div>
+        </div>
     </div>
 </div>
 
@@ -1131,6 +1240,56 @@ function renderProducts() {
             renderCart();
         });
     });
+}
+
+/* ================================================================
+   HAPPY CUSTOMERS — Testimonials
+   ================================================================ */
+function testimonialCardHTML(t) {
+    const rating = t.rating || 5;
+    const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+    return `
+        <div class="testimonial-card">
+            <img src="${t.img}" alt="${t.name}" class="testimonial-img">
+            <div class="testimonial-stars">${stars}</div>
+            <p class="testimonial-text">"${t.text}"</p>
+            <h4 class="testimonial-name">${t.name}</h4>
+        </div>`;
+}
+
+function renderTestimonials() {
+    const grid = document.getElementById('testimonialGrid');
+    if (!grid) return;
+    grid.innerHTML = (testimonials && testimonials.length)
+        ? testimonials.map(testimonialCardHTML).join('')
+        : `<div class="empty-msg">No reviews yet.</div>`;
+}
+
+/* ================================================================
+   OUR VIDEOS — Facebook Videos/Reels embed
+   ================================================================ */
+function videoCardHTML(v) {
+    const embedSrc = `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(v.url)}&show_text=false&autoplay=false`;
+    return `
+        <div class="video-card">
+            <div class="video-embed-wrap">
+                <iframe src="${embedSrc}"
+                    scrolling="no"
+                    frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    loading="lazy"></iframe>
+            </div>
+            ${v.title ? `<div class="video-caption">${v.title}</div>` : ''}
+        </div>`;
+}
+
+function renderVideos() {
+    const grid = document.getElementById('videoGrid');
+    if (!grid) return;
+    grid.innerHTML = (videos && videos.length)
+        ? videos.map(videoCardHTML).join('')
+        : `<div class="empty-msg">No videos yet.</div>`;
 }
 
 function cartCount() { return Object.values(cart).reduce((a, b) => a + b, 0); }
@@ -1547,6 +1706,8 @@ renderSiteInfo();
 renderFooterCategories();
 renderCategories();
 renderProducts();
+renderTestimonials();
+renderVideos();
 renderCart();
 </script>
 

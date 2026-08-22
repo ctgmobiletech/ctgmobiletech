@@ -4,8 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google" content="notranslate">
-<title>CTGMobileTech</title>
+<title>CTG Mobile Tech — Your Tech Destination in Chattogram</title>
+<meta name="description" content="CTG Mobile Tech — genuine pre-owned and new phones, plus phone accessories in Chattogram, Bangladesh. 14-day replacement guarantee. Call or message us on Facebook for details.">
+<meta name="keywords" content="CTG Mobile Tech, mobile shop Chattogram, used iPhone Bangladesh, new phones Bangladesh, phone accessories Chattogram, pre-owned phones Bangladesh">
 <link rel="icon" type="image/png" id="favicon" href="https://i.ibb.co/ksf8P1M2/b67ccab4-452e-4caf-bf30-b7855ce94251.png">
+
+<!-- PWA: ইনস্টলযোগ্য অ্যাপ হিসেবে কাজ করার জন্য -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#131a2e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CTG Mobile Tech">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+
+<!-- Open Graph / Facebook & Messenger link previews -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CTG Mobile Tech">
+<meta property="og:title" content="CTG Mobile Tech — Your Tech Destination in Chattogram">
+<meta property="og:description" content="Genuine pre-owned and new phones, plus phone accessories in Chattogram, Bangladesh. 14-day replacement guarantee.">
+<meta property="og:image" content="https://i.ibb.co/pv8mHNp3/2.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CTG Mobile Tech — Your Tech Destination in Chattogram">
+<meta name="twitter:description" content="Genuine pre-owned and new phones, plus phone accessories in Chattogram, Bangladesh. 14-day replacement guarantee.">
+<meta name="twitter:image" content="https://i.ibb.co/pv8mHNp3/2.png">
 <style>
 /* ================================================================
    CSS SECTION MAP
@@ -13,7 +40,6 @@
    BANNER   : .banner-container, .main-banner
    BODY     : .container, .categories-section, .product-grid, .detail-page
    FOOTER   : footer, .footer-content, .footer-column, .footer-bottom
-   SYSTEM   : .overlay, .drawer, .checkout-overlay, .checkout-modal
    ================================================================ */
     * {
         margin: 0;
@@ -129,17 +155,29 @@
 
     .nav-links a:hover { color: var(--primary-pink); }
 
-    .cart-btn {
-        background: var(--gradient-main);
-        color: white;
-        padding: 0.6rem 1.2rem;
+    .install-btn {
+        background: white;
+        color: var(--primary-purple);
+        border: 2px solid var(--primary-pink);
+        padding: 0.55rem 1rem;
         border-radius: 25px;
         font-weight: bold;
         display: flex;
         align-items: center;
         gap: 6px;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         white-space: nowrap;
+        transition: 0.25s;
+    }
+
+    .install-btn:hover {
+        background: var(--gradient-main);
+        color: white;
+        border-color: transparent;
+    }
+
+    @media (max-width: 600px) {
+        .install-btn span.install-label { display: none; }
     }
 
     .navbar-right {
@@ -360,40 +398,8 @@
         cursor: pointer;
     }
 
-    .price-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: auto;
-        padding-top: 0.8rem;
-    }
-
-    .price {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: var(--primary-pink);
-    }
-
-    .old-price {
-        font-size: 0.85rem;
-        color: #999;
-        text-decoration: line-through;
-        margin-right: 6px;
-    }
-
-    .discount-badge {
-        display: inline-block;
-        background: var(--gradient-main);
-        color: #fff;
-        font-size: 0.68rem;
-        font-weight: 700;
-        padding: 2px 8px;
-        border-radius: 20px;
-        margin-bottom: 6px;
-    }
-
     .btn-row { display: flex; gap: 8px; margin-top: auto; padding-top: 0.8rem; }
-    .btn-add, .btn-buy, .btn-details {
+    .btn-call, .btn-msg, .btn-details {
         color: white;
         padding: 0.5rem 0.9rem;
         border-radius: 20px;
@@ -402,10 +408,10 @@
         transition: opacity .2s;
         flex: 1;
         white-space: nowrap;
+        text-align: center;
     }
-    .btn-add { background: var(--primary-purple); }
-    .btn-buy, .btn-details { background: var(--gradient-main); }
-    .btn-add.added { opacity: 0.7; }
+    .btn-call { background: var(--primary-purple); }
+    .btn-msg, .btn-details { background: var(--gradient-main); }
 
     /* Happy Customers (Testimonials) */
     .testimonial-grid {
@@ -567,115 +573,6 @@
         color: #aaa;
     }
 
-    .overlay {
-        position: fixed; inset: 0; background: rgba(20,5,30,0.45);
-        opacity: 0; pointer-events: none; transition: opacity .2s;
-        z-index: 1100;
-    }
-    .overlay.open { opacity: 1; pointer-events: auto; }
-
-    .drawer {
-        position: fixed; top: 0; right: 0; height: 100%;
-        width: min(420px, 92vw);
-        background: #fff;
-        box-shadow: -8px 0 30px rgba(0,0,0,0.15);
-        transform: translateX(100%); transition: transform .25s ease;
-        z-index: 1101; display: flex; flex-direction: column;
-    }
-    .drawer.open { transform: translateX(0); }
-
-    .drawer-head {
-        padding: 20px 22px; border-bottom: 1px solid #eee;
-        display: flex; justify-content: space-between; align-items: center;
-        background: var(--gradient-main); color: #fff;
-    }
-    .drawer-head h3 { font-size: 1.2rem; }
-    .drawer-close {
-        background: rgba(255,255,255,0.2); color: #fff;
-        width: 30px; height: 30px; border-radius: 50%;
-        font-size: 18px; line-height: 1;
-    }
-    .drawer-close:hover { background: rgba(255,255,255,0.35); }
-
-    .drawer-items { flex: 1; overflow-y: auto; padding: 10px 22px; }
-    .empty-cart { text-align: center; padding: 60px 20px; color: #999; font-size: 14px; }
-
-    .drawer-item {
-        display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f0f0f0;
-    }
-    .drawer-item img {
-        width: 54px; height: 54px; border-radius: 8px; object-fit: cover; flex-shrink: 0;
-    }
-    .drawer-item .info { flex: 1; }
-    .drawer-item .info .name { font-weight: 600; font-size: 13.5px; margin-bottom: 2px; }
-    .drawer-item .info .price { font-size: 12.5px; color: #888; }
-
-    .qty-row { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
-    .qty-btn {
-        width: 22px; height: 22px; border-radius: 50%; border: 1px solid #ddd;
-        background: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center;
-    }
-    .qty-btn:hover { border-color: var(--primary-pink); color: var(--primary-pink); }
-    .qty-val { font-size: 13px; font-weight: 600; min-width: 14px; text-align: center; }
-    .remove-link { font-size: 12px; color: #b71c1c; font-weight: 600; margin-left: auto; }
-
-    .drawer-foot { padding: 18px 22px 24px; border-top: 1px solid #eee; }
-    .subtotal-row { display: flex; justify-content: space-between; font-size: 14.5px; margin-bottom: 14px; }
-    .subtotal-row .val { font-weight: 700; font-size: 17px; color: var(--primary-pink); }
-    .checkout-btn {
-        width: 100%; padding: 14px; border-radius: 999px;
-        background: var(--gradient-main); color: #fff; font-weight: 700; font-size: 15px;
-    }
-    .checkout-btn:disabled { background: #ddd; color: #999; cursor: not-allowed; }
-
-    .modal-overlay {
-        position: fixed; inset: 0; background: rgba(20,5,30,0.5);
-        display: flex; align-items: center; justify-content: center;
-        opacity: 0; pointer-events: none; transition: opacity .2s;
-        z-index: 1200; padding: 20px;
-    }
-    .modal-overlay.open { opacity: 1; pointer-events: auto; }
-    .modal {
-        background: #fff; border-radius: 16px;
-        width: min(460px, 100%); max-height: 88vh; overflow-y: auto;
-        padding: 28px;
-        transform: translateY(14px); transition: transform .22s ease;
-    }
-    .modal-overlay.open .modal { transform: translateY(0); }
-    .modal h3 { color: var(--primary-purple); font-size: 1.4rem; margin-bottom: 4px; }
-    .modal .sub { font-size: 13px; color: #888; margin-bottom: 20px; }
-
-    .field { margin-bottom: 14px; }
-    .field label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #444; }
-    .field input {
-        width: 100%; padding: 11px 13px; border-radius: 8px;
-        border: 1px solid #ddd; font-size: 16px; font-family: inherit;
-    }
-    .field input:focus { outline: 2px solid var(--primary-pink); outline-offset: 1px; border-color: var(--primary-pink); }
-    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .field-error { font-size: 12px; color: #b71c1c; margin-top: 4px; font-weight: 600; }
-    .field input.err { border-color: #b71c1c; }
-
-    .modal-summary { background: var(--light-bg); border-radius: 10px; padding: 14px 16px; margin: 18px 0; font-size: 13.5px; }
-    .modal-summary .row { display: flex; justify-content: space-between; padding: 4px 0; color: #777; }
-    .modal-summary .row.total { color: var(--primary-purple); font-weight: 700; font-size: 15.5px; border-top: 1px solid #e2e2e2; margin-top: 6px; padding-top: 8px; }
-
-    .place-order-btn {
-        width: 100%; padding: 14px; border-radius: 999px; background: var(--gradient-main); color: #fff;
-        font-weight: 700; font-size: 15px;
-    }
-    .modal-cancel { display: block; text-align: center; margin-top: 12px; font-size: 13px; color: #888; font-weight: 600; cursor: pointer; }
-
-    .confirm { text-align: center; padding: 8px 0 4px; }
-    .confirm .check {
-        width: 54px; height: 54px; border-radius: 50%; background: var(--gradient-main);
-        display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
-    }
-    .confirm .check svg { width: 26px; height: 26px; }
-    .confirm h3 { margin-bottom: 8px; }
-    .confirm p { font-size: 13.5px; color: #888; margin-bottom: 20px; }
-    .confirm .order-id { font-weight: 700; font-size: 14.5px; color: var(--primary-pink); }
-
     /* ===== Product Details (landing-page style) page ===== */
     .detail-page { display: none; }
     .detail-page.active { display: block; }
@@ -694,8 +591,10 @@
         gap: 2.2rem;
         background: white;
         border-radius: 16px;
-        padding: 2rem;
+        padding: 4rem 2rem 2rem;
         box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        max-width: 900px;
+        margin: 3rem auto 0;
     }
 
     .detail-gallery-main {
@@ -717,18 +616,8 @@
     .detail-info h2 { font-size: 1.6rem; color: #222; margin-bottom: 12px; }
     .detail-desc { color: #666; font-size: 0.95rem; margin-bottom: 1.2rem; }
 
-    .detail-price-box {
-        background: var(--light-bg); border-radius: 12px; padding: 14px 18px;
-        margin-bottom: 1.2rem; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-    }
-    .detail-price-box .price { font-size: 1.6rem; }
-
-    .detail-qty-row { display: flex; align-items: center; gap: 14px; margin-bottom: 1.4rem; }
-    .detail-qty-row .qty-btn { width: 32px; height: 32px; font-size: 16px; }
-    .detail-qty-row .qty-val { font-size: 16px; min-width: 20px; }
-
     .detail-cta-row { display: flex; gap: 10px; margin-bottom: 1.6rem; }
-    .detail-cta-row .btn-add, .detail-cta-row .btn-buy {
+    .detail-cta-row .btn-call, .detail-cta-row .btn-msg {
         flex: 1; padding: 0.9rem; font-size: 0.9rem; border-radius: 30px;
     }
 
@@ -777,57 +666,6 @@
         font-weight: 600;
     }
 
-    /* ===== Payment methods ===== */
-    .payment-methods {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        margin-bottom: 14px;
-    }
-    .payment-option {
-        position: relative;
-        border: 2px solid #e6e0ec;
-        border-radius: 10px;
-        padding: 10px 6px 8px;
-        text-align: center;
-        cursor: pointer;
-        transition: 0.2s;
-        background: #fff;
-    }
-    .payment-option input {
-        position: absolute;
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        top: 0; left: 0;
-        margin: 0;
-        cursor: pointer;
-    }
-    .payment-option.selected {
-        border-color: var(--primary-pink);
-        background: #eaf0fd;
-    }
-    .payment-option .pm-logo {
-        font-weight: 800;
-        font-size: 0.78rem;
-        border-radius: 6px;
-        padding: 6px 4px;
-        margin-bottom: 4px;
-        color: #fff;
-    }
-    .payment-option[data-method="cod"] .pm-logo { background: #2e7d32; }
-    .payment-option[data-method="bkash"] .pm-logo { background: #e2136e; }
-    .payment-option[data-method="nagad"] .pm-logo { background: #f6921e; }
-    .payment-option[data-method="rocket"] .pm-logo { background: #8c3494; }
-    .payment-option .pm-label { font-size: 0.72rem; font-weight: 600; color: #555; }
-    .payment-number-box {
-        background: var(--light-bg); border-radius: 8px; padding: 10px 12px;
-        font-size: 12.5px; color: #555; margin-bottom: 14px; display: none;
-    }
-    .payment-number-box.show { display: block; }
-    .payment-number-box b { color: var(--primary-purple); }
-    .field-error.payment-err { margin-top: 0; margin-bottom: 10px; }
-
     @media (max-width: 768px) {
         .nav-links { display: none; }
         .menu-toggle { display: flex; }
@@ -840,7 +678,6 @@
         .logo-mark { width: 42px; height: 42px; }
         .brand-text h1 { font-size: 1.15rem; }
         .brand-text p { font-size: 0.68rem; }
-        .cart-btn { padding: 0.5rem 0.85rem; font-size: 0.85rem; }
 
         .banner-container { margin: 1rem auto; }
 
@@ -852,14 +689,7 @@
         .category-card { padding: 0.8rem 0.3rem; }
         .category-icon { font-size: 1.5rem; margin-bottom: 0.3rem; }
 
-        .field-row { grid-template-columns: 1fr; }
         .detail-hero { grid-template-columns: 1fr; padding: 1.2rem; }
-
-        .modal { padding: 20px; border-radius: 14px; }
-        .modal h3 { font-size: 1.2rem; }
-
-        .payment-methods { gap: 8px; }
-        .payment-option { padding: 8px 4px 6px; }
 
         /* Footer on mobile: keep the gap BETWEEN the 3 columns (Brand /
            Categories / Contact Info), but tighten the spacing INSIDE each
@@ -869,9 +699,6 @@
         .footer-column h3 { margin-bottom: 0.7rem; }
         .footer-column p, .footer-column li { margin-bottom: 0.35rem; line-height: 1.4; }
 
-        /* Slightly larger buttons for touch */
-        .qty-btn { width: 32px; height: 32px; font-size: 15px; }
-        .drawer-close { width: 36px; height: 36px; }
         .detail-back { padding: 0.6rem 1.1rem; }
     }
 
@@ -883,20 +710,14 @@
         .product-info { padding: 0.7rem; }
         .product-info h3 { font-size: 0.85rem; margin-bottom: 0.35rem; }
         .product-cat { font-size: 0.62rem; }
-        .price { font-size: 1rem; }
-        .old-price { font-size: 0.72rem; }
-        .discount-badge { font-size: 0.6rem; padding: 2px 6px; }
 
         .btn-row { flex-direction: column; gap: 6px; }
-        .btn-add, .btn-buy, .btn-details { padding: 0.55rem 0.5rem; font-size: 0.75rem; }
+        .btn-call, .btn-msg, .btn-details { padding: 0.55rem 0.5rem; font-size: 0.75rem; }
 
         .category-grid { grid-template-columns: repeat(3, 1fr); }
 
-        .drawer { width: 100vw; }
-
         .detail-cta-row { flex-direction: column; }
         .detail-info h2 { font-size: 1.3rem; }
-        .detail-price-box .price { font-size: 1.3rem; }
     }
 </style>
 </head>
@@ -935,7 +756,7 @@
             </ul>
 
             <div class="navbar-right">
-                <button class="cart-btn" id="cartToggle">🛒 Cart (<span id="cartCount">0</span>)</button>
+                <button class="install-btn" id="installBtn" style="display:none;">📲 <span class="install-label">Install App</span></button>
                 <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span></button>
             </div>
         </nav>
@@ -952,7 +773,7 @@
      ② BANNER — HTML
      ================================================================ -->
 <div class="banner-container" id="homeSections">
-    <img id="bannerImg" alt="Projapoti Banner" class="main-banner">
+    <img id="bannerImg" alt="CTG Mobile Tech — genuine phones and accessories" class="main-banner">
 </div>
 
 <!-- ================================================================
@@ -970,25 +791,9 @@
                 <div class="detail-thumbs" id="detailThumbs"></div>
             </div>
             <div class="detail-info">
-                <div class="product-cat" id="detailCat"></div>
                 <h2 id="detailName"></h2>
-                <div id="detailDiscountBadge"></div>
                 <p class="detail-desc" id="detailDesc"></p>
                 <div class="detail-specs" id="detailSpecs"></div>
-                <div class="detail-price-box">
-                    <span class="old-price" id="detailOldPrice" style="display:none;"></span>
-                    <span class="price" id="detailPrice"></span>
-                </div>
-                <div class="detail-qty-row">
-                    <span style="font-weight:600; font-size:14px; color:#444;">Quantity</span>
-                    <button class="qty-btn" id="detailQtyDec">−</button>
-                    <span class="qty-val" id="detailQtyVal">1</span>
-                    <button class="qty-btn" id="detailQtyInc">+</button>
-                </div>
-                <div class="detail-cta-row">
-                    <button class="btn-add" id="detailAddBtn">Add to Cart</button>
-                    <button class="btn-buy" id="detailBuyBtn">Buy Now</button>
-                </div>
                 <div class="detail-benefits" id="detailBenefits"></div>
             </div>
         </div>
@@ -1044,45 +849,29 @@
     </div>
 </footer>
 
-<!-- ================================================================
-     ⑤ SYSTEM — HTML
-     Cart + Checkout
-     ================================================================ -->
-<div class="overlay" id="overlay"></div>
-<div class="drawer" id="drawer">
-    <div class="drawer-head">
-        <h3>Your Cart</h3>
-        <button class="drawer-close" id="drawerClose">&times;</button>
-    </div>
-    <div class="drawer-items" id="drawerItems"></div>
-    <div class="drawer-foot">
-        <div class="subtotal-row">
-            <span>Subtotal</span>
-            <span class="val" id="subtotalVal">৳ 0</span>
-        </div>
-        <button class="checkout-btn" id="checkoutBtn" disabled>Checkout</button>
-    </div>
-</div>
-
-<div class="modal-overlay" id="checkoutOverlay">
-    <div class="modal" id="checkoutModal"></div>
-</div>
-
 <script>
 // Common site information merged into this page.
 const SITE = {
     name: 'CTG Mobile Tech',
     tagline: 'Your Tech Destination',
+    description: 'Genuine pre-owned and new phones, plus phone accessories in Chattogram, Bangladesh — trusted service with a 14-day replacement guarantee.',
+    keywords: 'CTG Mobile Tech, mobile shop Chattogram, used iPhone Bangladesh, new phones Bangladesh, phone accessories Chattogram, pre-owned phones Bangladesh',
     phone: '01627710145',
     email: 'ctgmobiletech145@gmail.com',
     address: 'Shop No: 536, Level 5, Finlay South City, Bahaddarhat, Chittagong.',
     mapLink: 'https://maps.app.goo.gl/9mEKVqTqdECTJygZ9',
     facebook: 'https://www.facebook.com/ctgmobiletech',
     logoImg: 'https://i.ibb.co/ksf8P1M2/b67ccab4-452e-4caf-bf30-b7855ce94251.png',
-    bannerImg: 'https://i.ibb.co/pv8mHNp3/2.png',
-    deliveryCharge: 120,
-    web3formsKey: '038246c3-6489-499a-babe-6885836e714e'
+    bannerImg: 'https://i.ibb.co/pv8mHNp3/2.png'
 };
+
+// ফেসবুক পেজের লিংক থেকে Messenger লিংক বানানো (m.me)
+function messengerLink(prefillText) {
+    const match = SITE.facebook.match(/facebook\.com\/([^/?]+)/);
+    const username = match ? match[1] : '';
+    const base = username ? `https://m.me/${username}` : SITE.facebook;
+    return prefillText ? `${base}?text=${encodeURIComponent(prefillText)}` : base;
+}
 
 function renderSiteInfo() {
     const setText = (id, value) => {
@@ -1101,6 +890,7 @@ function renderSiteInfo() {
     setText('brandName', SITE.name);
     setText('brandTagline', SITE.tagline);
     setText('footerBrandName', SITE.name);
+    setText('footerDesc', SITE.description);
     setText('footerTagline', `"${SITE.tagline}"`);
     setText('copyrightText', `© 2026 ${SITE.name} — All rights reserved.`);
     setSrc('bannerImg', SITE.bannerImg);
@@ -1120,7 +910,41 @@ function renderSiteInfo() {
         <li>📘 <strong>Facebook:</strong> <a href="${SITE.facebook}" target="_blank" rel="noopener noreferrer">Visit Page</a></li>
     `);
 
+    restoreDefaultSEO();
+}
+
+/* ================================================================
+   SEO — restore the site's default title/meta tags.
+   Used on first load and whenever a product detail view is closed,
+   so the tags set by updateProductSEO() (in products.js) don't leak
+   into the home view.
+   ================================================================ */
+function restoreDefaultSEO() {
     document.title = `${SITE.name} — ${SITE.tagline}`;
+
+    const setMeta = (selector, value) => {
+        const el = document.querySelector(selector);
+        if (el) el.setAttribute('content', value);
+    };
+    setMeta('meta[name="description"]', SITE.description);
+    setMeta('meta[name="keywords"]', SITE.keywords);
+    setMeta('meta[property="og:title"]', `${SITE.name} — ${SITE.tagline}`);
+    setMeta('meta[property="og:description"]', SITE.description);
+    setMeta('meta[property="og:image"]', SITE.bannerImg);
+    setMeta('meta[name="twitter:title"]', `${SITE.name} — ${SITE.tagline}`);
+    setMeta('meta[name="twitter:description"]', SITE.description);
+    setMeta('meta[name="twitter:image"]', SITE.bannerImg);
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', `${window.location.origin}${window.location.pathname}`);
+
+    const structuredData = document.getElementById('product-structured-data');
+    if (structuredData) structuredData.remove();
 }
 </script>
 <!-- ================================================================
@@ -1135,13 +959,6 @@ function renderSiteInfo() {
    To add a new product, you don't need to touch this index.html file —
    just open products.js.)
    ====================================================================== */
-// Payment method config — put your own bKash/Nagad/Rocket numbers here
-const paymentMethods = [
-    { id: 'cod', label: 'Cash on Delivery', number: '' },
-    { id: 'bkash', label: 'bKash', number: '01869296343 (Personal)' },
-    { id: 'nagad', label: 'Nagad', number: '01869296343 (Personal)' },
-    { id: 'rocket', label: 'Rocket', number: '01869296343 (Personal)' }
-];
 
 /* ======================================================================
    Site logic below this point — no need to change anything here
@@ -1150,21 +967,16 @@ const paymentMethods = [
 // For showing the category list in this page's footer (this file doesn't
 // know this, since categories are this page's own data)
 function renderFooterCategories() {
-    document.title = `${SITE.name} — ${SITE.tagline}`;
     document.getElementById('footerCatList').innerHTML = categories
         .map(c => `<li><a href="#products">${c.label}</a></li>`).join('');
 }
 
-let cart = {};
 let activeCat = 'All';
-let detailQty = 1;
 let currentDetailId = null;
-let selectedPayment = 'cod';
 
 function renderCategories() {
     const grid = document.getElementById('categoryGrid');
-    const all = [{ id: 'All', icon: '✨', label: 'All Phone' }, ...categories];
-    grid.innerHTML = all.map(c => `
+    grid.innerHTML = categories.map(c => `
         <a href="#products" class="category-card ${c.id === activeCat ? 'active' : ''}" data-cat="${c.id}">
             <span class="category-icon">${c.icon}</span>
             <strong>${c.label}</strong>
@@ -1186,16 +998,8 @@ function productCardHTML(p) {
         <div class="product-card">
             <img src="${p.img}" alt="${p.name}" class="product-img" data-id="${p.id}">
             <div class="product-info">
-                <div class="product-cat">${p.cat}</div>
                 <h3 data-id="${p.id}">${p.name}</h3>
-                <div class="price-row">
-                    ${p.oldPrice ? `<span class="old-price">৳ ${p.oldPrice}</span>` : ''}
-                    <span class="price">৳ ${p.price}</span>
-                </div>
                 <div class="btn-row">
-                    <button class="btn-add ${cart[p.id] ? 'added' : ''}" data-id="${p.id}">
-                        ${cart[p.id] ? `In Cart (${cart[p.id]})` : 'Add to Cart'}
-                    </button>
                     <button class="btn-details" data-id="${p.id}">Details</button>
                 </div>
             </div>
@@ -1231,14 +1035,6 @@ function renderProducts() {
     });
     grid.querySelectorAll('.btn-details').forEach(btn => {
         btn.addEventListener('click', () => openProductDetail(Number(btn.dataset.id)));
-    });
-    grid.querySelectorAll('.btn-add').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const id = Number(btn.dataset.id);
-            cart[id] = (cart[id] || 0) + 1;
-            renderProducts();
-            renderCart();
-        });
     });
 }
 
@@ -1292,66 +1088,15 @@ function renderVideos() {
         : `<div class="empty-msg">No videos yet.</div>`;
 }
 
-function cartCount() { return Object.values(cart).reduce((a, b) => a + b, 0); }
-function cartSubtotal() {
-    return Object.entries(cart).reduce((sum, [id, qty]) => {
-        const p = products.find(pr => pr.id === Number(id));
-        return sum + p.price * qty;
-    }, 0);
-}
-
-function renderCart() {
-    document.getElementById('cartCount').textContent = cartCount();
-    const itemsEl = document.getElementById('drawerItems');
-    const entries = Object.entries(cart).filter(([, qty]) => qty > 0);
-    if (entries.length === 0) {
-        itemsEl.innerHTML = `<div class="empty-cart">Your cart is empty.<br>Try adding some products.</div>`;
-    } else {
-        itemsEl.innerHTML = entries.map(([id, qty]) => {
-            const p = products.find(pr => pr.id === Number(id));
-            return `
-                <div class="drawer-item">
-                    <img src="${p.img}" alt="${p.name}">
-                    <div class="info">
-                        <div class="name">${p.name}</div>
-                        <div class="price">৳ ${p.price}</div>
-                        <div class="qty-row">
-                            <button class="qty-btn" data-act="dec" data-id="${id}">−</button>
-                            <span class="qty-val">${qty}</span>
-                            <button class="qty-btn" data-act="inc" data-id="${id}">+</button>
-                            <span class="remove-link" data-act="remove" data-id="${id}">Remove</span>
-                        </div>
-                    </div>
-                </div>`;
-        }).join('');
-    }
-    document.getElementById('subtotalVal').textContent = `৳ ${cartSubtotal()}`;
-    document.getElementById('checkoutBtn').disabled = entries.length === 0;
-
-    itemsEl.querySelectorAll('[data-act]').forEach(el => {
-        el.addEventListener('click', () => {
-            const id = el.dataset.id;
-            const act = el.dataset.act;
-            if (act === 'inc') cart[id]++;
-            if (act === 'dec') { cart[id]--; if (cart[id] <= 0) delete cart[id]; }
-            if (act === 'remove') delete cart[id];
-            renderCart();
-            renderProducts();
-        });
-    });
-}
-
 /* ===== Product Details (landing page) ===== */
 
 function openProductDetail(id) {
     const p = products.find(pr => pr.id === id);
     if (!p) return;
     currentDetailId = id;
-    detailQty = 1;
 
     const imgs = (p.images && p.images.length) ? p.images : [p.img];
 
-    document.getElementById('detailCat').textContent = p.cat;
     document.getElementById('detailName').textContent = p.name;
     document.getElementById('detailDesc').textContent = p.desc || '';
 
@@ -1362,7 +1107,7 @@ function openProductDetail(id) {
         condition: 'Condition',
         battery: 'Battery',
         warranty: 'Warranty',
-        type: 'Type',
+        Box: 'Box',
         connector: 'Connector',
         material: 'Material',
         connectivity: 'Connectivity'
@@ -1398,27 +1143,19 @@ function openProductDetail(id) {
         });
     });
 
-    if (p.oldPrice && p.oldPrice > p.price) {
-        const off = Math.round((1 - p.price / p.oldPrice) * 100);
-        document.getElementById('detailDiscountBadge').innerHTML = `<span class="discount-badge">${off}% OFF</span>`;
-        document.getElementById('detailOldPrice').style.display = 'inline';
-        document.getElementById('detailOldPrice').textContent = `৳ ${p.oldPrice}`;
-    } else {
-        document.getElementById('detailDiscountBadge').innerHTML = '';
-        document.getElementById('detailOldPrice').style.display = 'none';
-    }
-    document.getElementById('detailPrice').textContent = `৳ ${p.price}`;
-    document.getElementById('detailQtyVal').textContent = detailQty;
-
     document.getElementById('detailBenefits').innerHTML = (p.benefits || [])
         .map(b => `<div class="detail-benefit-item"><span class="tick">✔</span><span>${b}</span></div>`).join('');
 
     document.getElementById('productDetail').classList.add('active');
     document.getElementById('productDetail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Update page title/meta tags for this product (function lives in products.js)
+    if (typeof updateProductSEO === 'function') updateProductSEO(p);
 }
 
 function closeProductDetail() {
     document.getElementById('productDetail').classList.remove('active');
+    restoreDefaultSEO();
 }
 
 document.getElementById('detailBack').addEventListener('click', (e) => {
@@ -1427,32 +1164,8 @@ document.getElementById('detailBack').addEventListener('click', (e) => {
     document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
 });
 
-document.getElementById('detailQtyInc').addEventListener('click', () => {
-    detailQty++;
-    document.getElementById('detailQtyVal').textContent = detailQty;
-});
-document.getElementById('detailQtyDec').addEventListener('click', () => {
-    if (detailQty > 1) detailQty--;
-    document.getElementById('detailQtyVal').textContent = detailQty;
-});
-
-document.getElementById('detailAddBtn').addEventListener('click', () => {
-    if (!currentDetailId) return;
-    cart[currentDetailId] = (cart[currentDetailId] || 0) + detailQty;
-    renderCart();
-    renderProducts();
-});
-
-document.getElementById('detailBuyBtn').addEventListener('click', () => {
-    if (!currentDetailId) return;
-    cart[currentDetailId] = (cart[currentDetailId] || 0) + detailQty;
-    renderCart();
-    closeProductDetail();
-    openCheckout();
-});
-
 /* ================================================================
-   TOP BAR JS — Mobile Menu + Cart Toggle
+   TOP BAR JS — Mobile Menu
    ================================================================ */
 const menuToggle = document.getElementById('menuToggle');
 const mobileNav = document.getElementById('mobileNav');
@@ -1467,238 +1180,6 @@ mobileNav.querySelectorAll('a').forEach(a => {
     });
 });
 
-const overlay = document.getElementById('overlay');
-const drawer = document.getElementById('drawer');
-document.getElementById('cartToggle').addEventListener('click', () => {
-    overlay.classList.add('open'); drawer.classList.add('open');
-});
-document.getElementById('drawerClose').addEventListener('click', closeDrawer);
-overlay.addEventListener('click', closeDrawer);
-function closeDrawer() { overlay.classList.remove('open'); drawer.classList.remove('open'); }
-
-const checkoutOverlay = document.getElementById('checkoutOverlay');
-const checkoutModal = document.getElementById('checkoutModal');
-
-function openCheckout() {
-    closeDrawer();
-    selectedPayment = 'cod';
-    renderCheckoutForm();
-    checkoutOverlay.classList.add('open');
-}
-document.getElementById('checkoutBtn').addEventListener('click', openCheckout);
-checkoutOverlay.addEventListener('click', (e) => { if (e.target === checkoutOverlay) closeCheckout(); });
-function closeCheckout() { checkoutOverlay.classList.remove('open'); }
-
-function renderCheckoutForm() {
-    const subtotal = cartSubtotal();
-    const shipping = subtotal > 0 ? SITE.deliveryCharge : 0;
-    const total = subtotal + shipping;
-    checkoutModal.innerHTML = `
-        <h3>Delivery Information</h3>
-        <div class="sub">Once you confirm your order, the product will be sent using your preferred payment method.</div>
-        <div class="field">
-            <label for="fld-name">Full Name</label>
-            <input id="fld-name" type="text" placeholder="Enter your name">
-            <div class="field-error" id="err-name" style="display:none;"></div>
-        </div>
-        <div class="field">
-            <label for="fld-phone">Phone Number</label>
-            <input id="fld-phone" type="tel" placeholder="e.g. 01XXXXXXXXX">
-            <div class="field-error" id="err-phone" style="display:none;"></div>
-        </div>
-        <div class="field">
-            <label for="fld-address">Address</label>
-            <input id="fld-address" type="text" placeholder="House/Road, Area">
-            <div class="field-error" id="err-address" style="display:none;"></div>
-        </div>
-        <div class="field-row">
-            <div class="field">
-                <label for="fld-city">City</label>
-                <input id="fld-city" type="text" placeholder="e.g. Chattogram">
-                <div class="field-error" id="err-city" style="display:none;"></div>
-            </div>
-            <div class="field">
-                <label for="fld-zip">Postal Code</label>
-                <input id="fld-zip" type="text" placeholder="4000">
-                <div class="field-error" id="err-zip" style="display:none;"></div>
-            </div>
-        </div>
-
-        <div class="field">
-            <label>Select Payment Method</label>
-            <div class="payment-methods" id="paymentMethods">
-                ${paymentMethods.map(pm => `
-                    <label class="payment-option ${pm.id === selectedPayment ? 'selected' : ''}" data-method="${pm.id}">
-                        <input type="radio" name="paymentMethod" value="${pm.id}" ${pm.id === selectedPayment ? 'checked' : ''}>
-                        <div class="pm-logo">${pm.id === 'cod' ? '৳ Cash' : pm.label}</div>
-                        <div class="pm-label">${pm.id === 'cod' ? 'Cash on Delivery' : pm.label}</div>
-                    </label>
-                `).join('')}
-            </div>
-            <div class="payment-number-box ${selectedPayment !== 'cod' ? 'show' : ''}" id="paymentNumberBox">
-                ${selectedPayment !== 'cod' ? `Send Money to <b>${paymentMethods.find(pm => pm.id === selectedPayment).label}</b> number: <b>${paymentMethods.find(pm => pm.id === selectedPayment).number}</b>. After sending, enter the Transaction ID below.` : ''}
-            </div>
-            <div class="field" id="trxField" style="display:${selectedPayment !== 'cod' ? 'block' : 'none'};">
-                <label for="fld-trx">Transaction ID (TrxID)</label>
-                <input id="fld-trx" type="text" placeholder="e.g. 8N7A9XXXXX">
-                <div class="field-error" id="err-trx" style="display:none;"></div>
-            </div>
-        </div>
-
-        <div class="modal-summary">
-            <div class="row"><span>Subtotal</span><span>৳ ${subtotal}</span></div>
-            <div class="row"><span>Delivery Charge</span><span>৳ ${shipping}</span></div>
-            <div class="row total"><span>Total</span><span>৳ ${total}</span></div>
-        </div>
-        <button class="place-order-btn" id="placeOrderBtn">Confirm Order</button>
-        <div class="field-error" id="submitError" style="display:none; text-align:center; margin-top:10px;"></div>
-        <span class="modal-cancel" id="cancelCheckout">Cancel, go back to cart</span>
-    `;
-    document.getElementById('cancelCheckout').addEventListener('click', () => {
-        closeCheckout();
-        overlay.classList.add('open'); drawer.classList.add('open');
-    });
-    document.getElementById('placeOrderBtn').addEventListener('click', handlePlaceOrder);
-
-    document.querySelectorAll('.payment-option').forEach(opt => {
-        opt.addEventListener('click', () => {
-            selectedPayment = opt.dataset.method;
-            updatePaymentSection();
-        });
-    });
-}
-
-function updatePaymentSection() {
-    // When the payment method changes, only the payment-related section updates;
-    // the rest of the form (name, phone, address, etc.) stays unchanged.
-
-    document.querySelectorAll('.payment-option').forEach(opt => {
-        opt.classList.toggle('selected', opt.dataset.method === selectedPayment);
-        const radio = opt.querySelector('input[type="radio"]');
-        if (radio) radio.checked = opt.dataset.method === selectedPayment;
-    });
-
-    const numberBox = document.getElementById('paymentNumberBox');
-    if (numberBox) {
-        if (selectedPayment !== 'cod') {
-            const pm = paymentMethods.find(pm => pm.id === selectedPayment);
-            numberBox.classList.add('show');
-            numberBox.innerHTML = `Send Money to <b>${pm.label}</b> number: <b>${pm.number}</b>. After sending, enter the Transaction ID below.`;
-        } else {
-            numberBox.classList.remove('show');
-            numberBox.innerHTML = '';
-        }
-    }
-
-    const trxField = document.getElementById('trxField');
-    if (trxField) {
-        trxField.style.display = selectedPayment !== 'cod' ? 'block' : 'none';
-    }
-}
-
-async function handlePlaceOrder() {
-    const fields = [
-        { id: 'fld-name', err: 'err-name', msg: 'Enter your name' },
-        { id: 'fld-phone', err: 'err-phone', msg: 'Enter phone number' },
-        { id: 'fld-address', err: 'err-address', msg: 'Enter address' },
-        { id: 'fld-city', err: 'err-city', msg: 'Enter city name' },
-        { id: 'fld-zip', err: 'err-zip', msg: 'Enter postal code' }
-    ];
-    if (selectedPayment !== 'cod') {
-        fields.push({ id: 'fld-trx', err: 'err-trx', msg: 'Enter transaction ID' });
-    }
-    let valid = true;
-    fields.forEach(f => {
-        const input = document.getElementById(f.id);
-        const errEl = document.getElementById(f.err);
-        if (!input.value.trim()) {
-            input.classList.add('err');
-            errEl.textContent = f.msg;
-            errEl.style.display = 'block';
-            valid = false;
-        } else {
-            input.classList.remove('err');
-            errEl.style.display = 'none';
-        }
-    });
-    if (!valid) return;
-
-    const name = document.getElementById('fld-name').value.trim();
-    const phone = document.getElementById('fld-phone').value.trim();
-    const address = document.getElementById('fld-address').value.trim();
-    const city = document.getElementById('fld-city').value.trim();
-    const zip = document.getElementById('fld-zip').value.trim();
-    const trxId = selectedPayment !== 'cod' ? document.getElementById('fld-trx').value.trim() : '';
-    const paymentLabel = paymentMethods.find(pm => pm.id === selectedPayment).label;
-
-    const orderId = 'PRJ-' + Math.floor(10000 + Math.random() * 89999);
-    const subtotal = cartSubtotal();
-    const shipping = subtotal > 0 ? SITE.deliveryCharge : 0;
-    const total = subtotal + shipping;
-
-    const itemsList = Object.entries(cart).filter(([, qty]) => qty > 0).map(([id, qty]) => {
-        const p = products.find(pr => pr.id === Number(id));
-        return `${p.name} — ${qty} pcs x ৳${p.price} = ৳${p.price * qty}`;
-    }).join('\n');
-
-    const placeBtn = document.getElementById('placeOrderBtn');
-    const submitErr = document.getElementById('submitError');
-    placeBtn.disabled = true;
-    placeBtn.textContent = 'Sending...';
-    submitErr.style.display = 'none';
-
-    const payload = {
-        access_key: SITE.web3formsKey,
-        subject: `New Order — ${orderId} (${SITE.name})`,
-        from_name: SITE.name,
-        'Order ID': orderId,
-        'Customer Name': name,
-        'Phone': phone,
-        'Address': `${address}, ${city} - ${zip}`,
-        'Products': itemsList,
-        'Subtotal': `৳ ${subtotal}`,
-        'Delivery Charge': `৳ ${shipping}`,
-        'Total': `৳ ${total}`,
-        'Payment Method': paymentLabel,
-        'Transaction ID': trxId || 'N/A (COD)'
-    };
-
-    try {
-        const res = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-            body: JSON.stringify(payload)
-        });
-        const result = await res.json();
-        if (!result.success) throw new Error(result.message || 'Could not send');
-        showOrderConfirmation(orderId);
-    } catch (e) {
-        placeBtn.disabled = false;
-        placeBtn.textContent = 'Confirm Order';
-        submitErr.textContent = 'There was a problem sending the order. Please try again.';
-        submitErr.style.display = 'block';
-    }
-}
-
-function showOrderConfirmation(orderId) {
-    checkoutModal.innerHTML = `
-        <div class="confirm">
-            <div class="check">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5L9.5 18L20 6" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Order Successful</h3>
-            <p>Thank you! Your order has been received. We will contact you soon.</p>
-            <div class="order-id">Order ID: ${orderId}</div>
-            <button class="place-order-btn" style="margin-top:22px;" id="closeConfirm">Back to Shop</button>
-        </div>
-    `;
-    document.getElementById('closeConfirm').addEventListener('click', () => {
-        cart = {};
-        renderProducts(); renderCart();
-        closeCheckout();
-    });
-}
-
 /* ================================================================
    FOOTER JS — Footer information
    ================================================================ */
@@ -1708,7 +1189,39 @@ renderCategories();
 renderProducts();
 renderTestimonials();
 renderVideos();
-renderCart();
+
+/* ================================================================
+   PWA — Install App বাটন ও Service Worker
+   ================================================================ */
+let deferredInstallPrompt = null;
+const installBtn = document.getElementById('installBtn');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    if (installBtn) installBtn.style.display = 'flex';
+});
+
+if (installBtn) {
+    installBtn.addEventListener('click', async () => {
+        if (!deferredInstallPrompt) return;
+        deferredInstallPrompt.prompt();
+        await deferredInstallPrompt.userChoice;
+        deferredInstallPrompt = null;
+        installBtn.style.display = 'none';
+    });
+}
+
+window.addEventListener('appinstalled', () => {
+    if (installBtn) installBtn.style.display = 'none';
+    deferredInstallPrompt = null;
+});
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+}
 </script>
 
 </body>

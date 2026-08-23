@@ -14,11 +14,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/rGR6gzf3/1.jpg',
+        img: 'images/products/iphone-12-pro.jpg',
 
         images: [
 
-            'https://i.ibb.co/rGR6gzf3/1.jpg'
+            'images/products/iphone-12-pro.jpg'
 
         ],
 
@@ -63,11 +63,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/vxcn0ngN/3.jpg',
+        img: 'images/products/iphone-14-pro-max-1.jpg',
 
         images: [
 
-            'https://i.ibb.co/vxcn0ngN/3.jpg'
+            'images/products/iphone-14-pro-max-1.jpg'
 
         ],
 
@@ -111,11 +111,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/XfFKVQFL/4.jpg',
+        img: 'images/products/iphone-15-pro-1.jpg',
 
         images: [
 
-            'https://i.ibb.co/XfFKVQFL/4.jpg'
+            'images/products/iphone-15-pro-1.jpg'
 
         ],
 
@@ -159,11 +159,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/Tx84Hsk4/5.jpg',
+        img: 'images/products/vivo-v30-5g.jpg',
 
         images: [
 
-            'https://i.ibb.co/Tx84Hsk4/5.jpg'
+            'images/products/vivo-v30-5g.jpg'
 
         ],
 
@@ -207,11 +207,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/9mrw9JZm/6.jpg',
+        img: 'images/products/iphone-15-pro-2.jpg',
 
         images: [
 
-            'https://i.ibb.co/9mrw9JZm/6.jpg'
+            'images/products/iphone-15-pro-2.jpg'
 
         ],
 
@@ -256,11 +256,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/21HycnKS/7.jpg',
+        img: 'images/products/iphone-13-1.jpg',
 
         images: [
 
-            'https://i.ibb.co/21HycnKS/7.jpg'
+            'images/products/iphone-13-1.jpg'
 
         ],
 
@@ -304,11 +304,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/KxdKxPV6/8.jpg',
+        img: 'images/products/huawei-pura-70.jpg',
 
         images: [
 
-            'https://i.ibb.co/KxdKxPV6/8.jpg'
+            'images/products/huawei-pura-70.jpg'
 
         ],
 
@@ -352,11 +352,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/J86L6D6/9.jpg',
+        img: 'images/products/redmi-note-12.jpg',
 
         images: [
 
-            'https://i.ibb.co/J86L6D6/9.jpg'
+            'images/products/redmi-note-12.jpg'
 
         ],
 
@@ -400,11 +400,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/hFcnnWHF/10.jpg',
+        img: 'images/products/iphone-15-pro-max.jpg',
 
         images: [
 
-            'https://i.ibb.co/hFcnnWHF/10.jpg'
+            'images/products/iphone-15-pro-max.jpg'
 
         ],
 
@@ -448,11 +448,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/6JvrBwmf/11.jpg',
+        img: 'images/products/iphone-13-2.jpg',
 
         images: [
 
-            'https://i.ibb.co/6JvrBwmf/11.jpg'
+            'images/products/iphone-13-2.jpg'
 
         ],
 
@@ -496,11 +496,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/mVXsPcdz/12.jpg',
+        img: 'images/products/iphone-14-pro-max-2.jpg',
 
         images: [
 
-            'https://i.ibb.co/mVXsPcdz/12.jpg'
+            'images/products/iphone-14-pro-max-2.jpg'
 
         ],
 
@@ -544,11 +544,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/5XqNPtMG/13.jpg',
+        img: 'images/products/iphone-x.jpg',
 
         images: [
 
-            'https://i.ibb.co/5XqNPtMG/13.jpg'
+            'images/products/iphone-x.jpg'
 
         ],
 
@@ -592,11 +592,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/d4nkJyT2/14.jpg',
+        img: 'images/products/iphone-15.jpg',
 
         images: [
 
-            'https://i.ibb.co/d4nkJyT2/14.jpg'
+            'images/products/iphone-15.jpg'
 
         ],
 
@@ -640,11 +640,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/P3F4d84/15.jpg',
+        img: 'images/products/iphone-16-pro-max-1.jpg',
 
         images: [
 
-            'https://i.ibb.co/P3F4d84/15.jpg'
+            'images/products/iphone-16-pro-max-1.jpg'
 
         ],
 
@@ -688,11 +688,11 @@ const products = [
 
         cat: 'Pre-owned Phones',
 
-        img: 'https://i.ibb.co/84dVn5hg/16.jpg',
+        img: 'images/products/iphone-16-pro-1.jpg',
 
         images: [
 
-            'https://i.ibb.co/84dVn5hg/16.jpg'
+            'images/products/iphone-16-pro-1.jpg'
 
         ],
 
@@ -742,11 +742,11 @@ const products = [
 
         cat: 'New Phones',
 
-        img: 'https://i.ibb.co/4g20SbnK/vivo-V30-Pro.jpg',
+        img: 'images/products/vivo-v30-pro.jpg',
 
         images: [
 
-            'https://i.ibb.co/4g20SbnK/vivo-V30-Pro.jpg'
+            'images/products/vivo-v30-pro.jpg'
 
         ],
 
@@ -790,11 +790,11 @@ const products = [
 
         cat: 'New Phones',
 
-        img: 'https://i.ibb.co/jk50JJ8F/i-Phone-17-Pro.jpg',
+        img: 'images/products/iphone-17-pro.jpg',
 
         images: [
 
-            'https://i.ibb.co/jk50JJ8F/i-Phone-17-Pro.jpg'
+            'images/products/iphone-17-pro.jpg'
 
         ],
 
@@ -839,11 +839,11 @@ const products = [
 
         cat: 'New Phones',
 
-        img: 'https://i.ibb.co/pBCk12KL/2.jpg',
+        img: 'images/products/iphone-15-plus.jpg',
 
         images: [
 
-            'https://i.ibb.co/pBCk12KL/2.jpg'
+            'images/products/iphone-15-plus.jpg'
 
         ],
 
@@ -888,11 +888,11 @@ const products = [
 
         cat: 'New Phones',
 
-        img: 'https://i.ibb.co/rTfwXyp/4.jpg',
+        img: 'images/products/iphone-16-pro-2.jpg',
 
         images: [
 
-            'https://i.ibb.co/rTfwXyp/4.jpg'
+            'images/products/iphone-16-pro-2.jpg'
 
         ],
 
@@ -944,12 +944,11 @@ const products = [
 
         cat: 'Accessories',
 
-        img: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80',
+       img: 'images/products/Power Adapter.jpg',
 
         images: [
 
-            'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80'
-
+            'images/products/Power Adapter.jpg'
         ],
 
         desc: 'Original-style fast charging USB-C power adapter for compatible devices.',
@@ -992,12 +991,11 @@ const products = [
 
         cat: 'Accessories',
 
-        img: 'https://images.unsplash.com/photo-1601593346740-925612772716?auto=format&fit=crop&w=800&q=80',
+        img: 'images/products/MagSafe Case.jpg',
 
         images: [
 
-            'https://images.unsplash.com/photo-1601593346740-925612772716?auto=format&fit=crop&w=800&q=80'
-
+            'images/products/MagSafe Case.jpg'
         ],
 
         desc: 'Premium protective phone case with stylish design and MagSafe compatibility.',
@@ -1040,12 +1038,11 @@ const products = [
 
         cat: 'Accessories',
 
-        img: 'https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80',
+         img: 'images/products/Wireless Earbuds.jpg',
 
         images: [
 
-            'https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80'
-
+            'images/products/Wireless Earbuds.jpg'
         ],
 
         desc: 'Compact wireless earbuds with clear sound and comfortable fit.',
@@ -1088,11 +1085,11 @@ const products = [
 
         cat: 'Accessories',
 
-        img: 'https://i.ibb.co/PG0BrJY7/55.jpg',
+        img: 'images/products/Charging Cable.jpg',
 
         images: [
 
-            'https://i.ibb.co/PG0BrJY7/55.jpg'
+            'images/products/Charging Cable.jpg'
 
         ],
 
@@ -1771,7 +1768,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // =====================================================
 // 😊 HAPPY CUSTOMERS (Testimonials)
 // নতুন কাস্টমার রিভিউ যোগ করতে নিচে { } আকারে একটা নতুন এন্ট্রি বসান
-// img: কাস্টমারের ছবির লিংক (ibb.co তে আপলোড করে লিংক বসান),
+// img: কাস্টমারের ছবি images/testimonials/ ফোল্ডারে রেখে লিংক বসান
+//      (যেমন: images/testimonials/testimonial-5.jpg),
 // name: কাস্টমারের নাম, text: তাদের রিভিউ/মন্তব্য,
 // rating: ১ থেকে ৫ (না দিলে ৫ ধরা হবে)
 //
@@ -1783,28 +1781,28 @@ const testimonials = [
     {
         id: 1,
         name: 'Happy Customer',
-        img: 'https://i.ibb.co/VcmbX32q/2.jpg',
+        img: 'images/testimonials/testimonial-1.jpg',
         rating: 5,
         text: 'আরেকজন সন্তুষ্ট কাস্টমারের হাতে তুলে দেওয়া হলো তার পছন্দের কাঙ্ক্ষিত ফোনটি। আপনাদের বিশ্বাস, ভালোবাসা আর সন্তুষ্টিই আমাদের এগিয়ে চলার সবচেয়ে বড় অনুপ্রেরণা। ধন্যবাদ CTG Mobile Tech-এর পাশে থাকার জন্য।'
     },
     {
         id: 2,
         name: 'Happy Customer',
-        img: 'https://i.ibb.co/ShV4n9x/2.jpg',
+        img: 'images/testimonials/testimonial-2.jpg',
         rating: 5,
         text: 'কাস্টমারের মুখের হাসিই আমাদের সাফল্যের আসল পরিচয়! আজও আরেকজন প্রিয় কাস্টমারের হাতে পৌঁছে দিলাম তার স্বপ্নের ফোন। আপনাদের বিশ্বাসই আমাদের সবচেয়ে বড় প্রাপ্তি।'
     },
     {
         id: 3,
         name: 'Happy Customer',
-        img: 'https://i.ibb.co/v4mT47vx/3.jpg',
+        img: 'images/testimonials/testimonial-3.jpg',
         rating: 4,
         text: 'আরেকটি সুন্দর ডেলিভারি, আরেকজন সন্তুষ্ট কাস্টমার! আপনার পছন্দের ফোনটি আপনার হাতে তুলে দিতে পেরে আমরা সত্যিই আনন্দিত। আপনাদের আস্থা ও ভালোবাসাই CTG Mobile Tech-এর পথচলার শক্তি।'
     },
     {
         id: 4,
         name: 'Happy Customer',
-        img: 'https://i.ibb.co/xSb4MYbm/778568563-1371933825101793-4379244867737935191-n.jpg',
+        img: 'images/testimonials/testimonial-4.jpg',
         rating: 5,
         text: 'আরেকজন প্রিয় কাস্টমারের হাতে তুলে দেওয়া হলো তার কাঙ্ক্ষিত স্মার্টফোন। আপনাদের স্বপ্নের ফোন কেনার যাত্রায় পাশে থাকতে পারাই আমাদের আনন্দ। আপনাদের বিশ্বাস ও ভালোবাসাই CTG Mobile Tech-এর সবচেয়ে বড় অর্জন।'
     }

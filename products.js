@@ -52,53 +52,7 @@ const products = [
 
     },
 
-    {
-
-        id: 2,
-
-        name: 'iPhone 15 pro',
-
-        cat: 'Pre-owned Phones',
-
-        img: 'https://i.ibb.co/XfFKVQFL/4.jpg',
-
-        images: [
-
-            'https://i.ibb.co/XfFKVQFL/4.jpg'
-
-        ],
-
-        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
-
-        specs: {
-
-            storage: '128gb',
-
-            Variant: 'LLA',
-
-            color: 'Sierra Blue',
-
-            box: 'Yes',
-
-            battery: 'BH-93%',
-
-            warranty: '14 Day'
-
-        },
-
-
-
-        // SEO
-
-        seo: {
-    title: 'iPhone 15 pro 128GB in Bangladesh',
-
-    description: 'Buy used iPhone 15 pro 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-
-    keywords: 'iPhone 15 pro, iPhone 15 pro Bangladesh, used iPhone 15 pro Bangladesh, iPhone 15 pro 128GB Bangladesh, used phone Bangladesh, iPhone 15 pro Sierra Blue'
-}
-
-    },
+    
 
 
     {

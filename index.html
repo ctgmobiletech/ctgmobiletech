@@ -365,7 +365,7 @@ src="https://www.facebook.com/tr?id=2411182092622687&ev=PageView&noscript=1"
         color: var(--primary-purple);
         margin: 1rem 0 0.2rem;
         padding-bottom: 6px;
-        border-bottom: 2px solid #f0e4f5;
+        border-bottom: 2px solid #dbe4fb;
         display: flex;
         align-items: center;
         gap: 8px;
@@ -743,12 +743,12 @@ src="https://www.facebook.com/tr?id=2411182092622687&ev=PageView&noscript=1"
 
 /* ===== Accessories cart / price ===== */
 .accessory-price-box{margin:8px 0 10px}
-.accessory-price{font-weight:800;font-size:1rem;color:#5b2db0}
+.accessory-price{font-weight:800;font-size:1rem;color:var(--primary-pink)}
 .accessory-old-price{text-decoration:line-through;color:#999;font-size:.8rem;margin-left:6px}
 .accessory-discount{display:inline-block;margin-left:6px;padding:2px 6px;border-radius:10px;background:#e8f7ec;color:#13833b;font-size:.7rem;font-weight:800}
 .btn-cart{background:#16833b;color:#fff;padding:.55rem .75rem;border-radius:20px;font-weight:700;font-size:.78rem;flex:1}
-.cart-fab{position:fixed;right:18px;bottom:18px;z-index:1500;background:#5b2db0;color:#fff;border:0;border-radius:999px;padding:12px 16px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.2)}
-.cart-count{background:#fff;color:#5b2db0;border-radius:50%;padding:2px 7px;margin-left:4px}
+.cart-fab{position:fixed;right:18px;bottom:18px;z-index:1500;background:var(--gradient-main);color:#fff;border:0;border-radius:999px;padding:12px 16px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.cart-count{background:#fff;color:var(--primary-pink);border-radius:50%;padding:2px 7px;margin-left:4px}
 .cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:3000;display:none;align-items:center;justify-content:center;padding:15px}
 .cart-overlay.open{display:flex}
 .cart-modal{width:min(560px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:16px;padding:20px}
@@ -763,7 +763,7 @@ src="https://www.facebook.com/tr?id=2411182092622687&ev=PageView&noscript=1"
 .cod-form{border-top:1px solid #eee;padding-top:14px}
 .cod-form input,.cod-form textarea{width:100%;box-sizing:border-box;padding:10px;margin:0 0 9px;border:1px solid #ddd;border-radius:8px}
 .cod-form textarea{min-height:75px}
-.cod-submit{width:100%;border:0;border-radius:22px;padding:12px;background:#5b2db0;color:#fff;font-weight:800}
+.cod-submit{width:100%;border:0;border-radius:22px;padding:12px;background:var(--gradient-main);color:#fff;font-weight:800}
 .cart-empty{text-align:center;color:#888;padding:25px}
 @media(max-width:480px){.cart-fab{right:10px;bottom:10px}.cart-item{grid-template-columns:52px 1fr auto}.cart-item img{width:52px;height:52px}}
 
@@ -1313,7 +1313,8 @@ function openProductDetail(id) {
         condition: 'Condition',
         battery: 'Battery',
         warranty: 'Warranty',
-        Box: 'Box',
+        box: 'Box',
+        variant: 'Variant',
         connector: 'Connector',
         material: 'Material',
         connectivity: 'Connectivity'

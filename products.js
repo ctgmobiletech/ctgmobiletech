@@ -13,7 +13,7 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256GB',
-            Variant: 'Japan',
+            variant: 'Japan',
             color: 'Sierra Blue',
             battery: 'BH-87%',
             warranty: '14 Day'
@@ -27,7 +27,7 @@ const products = [
     },
     {
         id: 2,
-        name: '14 pro max',
+        name: 'iPhone 14 Pro Max',
         cat: 'Pre-owned Phones',
         img: 'images/products/iphone-14-pro-max-1.jpg',
         images: [
@@ -36,7 +36,7 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '128gb',
-            Variant: 'TDRA',
+            variant: 'TDRA',
             color: 'gold',
             box: 'Yes',
             battery: 'BH-84%',
@@ -44,14 +44,14 @@ const products = [
         },
         // SEO
         seo: {
-    title: '14 pro max 128GB in Bangladesh',
-    description: 'Buy used 14 pro max 128GB in Bangladesh. gold colour, 87% battery health, includes a 14-day replacement guarantee.',
-    keywords: '14 pro max, 14 pro max Bangladesh, used 14 pro max Bangladesh, 14 pro max 128GB Bangladesh, used phone Bangladesh, 14 pro max gold'
+    title: 'iPhone 14 Pro Max 128GB (TDRA) in Bangladesh',
+    description: 'Buy used iPhone 14 Pro Max 128GB in Bangladesh. Gold colour, TDRA variant, 84% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 128GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Gold'
 }
     },
     {
         id: 3,
-        name: '14 pro max',
+        name: 'iPhone 14 Pro Max',
         cat: 'Pre-owned Phones',
         img: 'images/products/iphone-14-pro-max-1.jpg',
         images: [
@@ -60,7 +60,7 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '512gb',
-            Variant: 'YC/A',
+            variant: 'YC/A',
             color: 'gold',
             box: 'Yes',
             battery: 'BH-88%',
@@ -68,32 +68,32 @@ const products = [
         },
         // SEO
         seo: {
-    title: '14 pro max 128GB in Bangladesh',
-    description: 'Buy used 14 pro max 128GB in Bangladesh. gold colour, 87% battery health, includes a 14-day replacement guarantee.',
-    keywords: '14 pro max, 14 pro max Bangladesh, used 14 pro max Bangladesh, 14 pro max 128GB Bangladesh, used phone Bangladesh, 14 pro max gold'
+    title: 'iPhone 14 Pro Max 512GB in Bangladesh',
+    description: 'Buy used iPhone 14 Pro Max 512GB in Bangladesh. Gold colour, 88% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 512GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Gold'
 }
    },
     {
         id: 4,
         name: 'iPhone 14',
         cat: 'Pre-owned Phones',
-        img: 'images/products/iphone-13-1.jpg',
+        img: 'images/products/iphone-14-1.jpg',
         images: [
-            'images/products/iphone-13-1.jpg'
+            'images/products/iphone-14-1.jpg'
         ],
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '128gb',
-            Variant: 'China',
-            color: 'white',
+            variant: 'China',
+            color: 'White',
             battery: 'BH-88%',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'iPhone 13 128GB in Bangladesh',
-    description: 'Buy used iPhone 13 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 13, iPhone 13 Bangladesh, used iPhone 13 Bangladesh, iPhone 13 128GB Bangladesh, used phone Bangladesh, iPhone 13 Sierra Blue'
+    title: 'iPhone 14 128GB in Bangladesh',
+    description: 'Buy used iPhone 14 128GB in Bangladesh. White colour, China variant, 88% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 14, iPhone 14 Bangladesh, used iPhone 14 Bangladesh, iPhone 14 128GB Bangladesh, used phone Bangladesh, iPhone 14 White'
 }
     },
     {
@@ -107,7 +107,7 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '128gb',
-            Variant: 'ZPA/Singapur',
+            variant: 'ZPA/Singapur',
             color: 'Purple',
             box: 'Yes',
             battery: 'BH-87%',
@@ -115,9 +115,9 @@ const products = [
         },
         // SEO
         seo: {
-    title: 'iPhone 14 Pro Max 128GB in Bangladesh',
-    description: 'Buy used iPhone 14 Pro Max 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 128GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Sierra Blue'
+    title: 'iPhone 14 Pro Max 128GB (Singapore) in Bangladesh',
+    description: 'Buy used iPhone 14 Pro Max 128GB in Bangladesh. Purple colour, Singapore variant, 87% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 128GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Purple'
 }
     },
     {
@@ -131,7 +131,7 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Variant: 'ZA/A',
+            variant: 'ZA/A',
             color: 'Purple',
             box: 'Yes',
             battery: 'BH-90%',
@@ -139,9 +139,9 @@ const products = [
         },
         // SEO
         seo: {
-    title: 'iPhone 14 Pro Max 128GB in Bangladesh',
-    description: 'Buy used iPhone 14 Pro Max 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 128GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Sierra Blue'
+    title: 'iPhone 14 Pro Max 256GB (ZA/A) in Bangladesh',
+    description: 'Buy used iPhone 14 Pro Max 256GB in Bangladesh. Purple colour, 90% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Purple'
 }
     },
     {
@@ -155,7 +155,7 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Variant: 'AA/A',
+            variant: 'AA/A',
             color: 'Purple',
             box: 'Yes',
             battery: 'BH-88%',
@@ -163,14 +163,14 @@ const products = [
         },
         // SEO
         seo: {
-    title: 'iPhone 14 Pro Max 128GB in Bangladesh',
-    description: 'Buy used iPhone 14 Pro Max 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 128GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Sierra Blue'
+    title: 'iPhone 14 Pro Max 256GB (AA/A) in Bangladesh',
+    description: 'Buy used iPhone 14 Pro Max 256GB in Bangladesh. Purple colour, 88% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Purple'
 }
     },
     {
         id: 8,
-        name: 'iPhone 15 pro',
+        name: 'iPhone 15 Pro',
         cat: 'Pre-owned Phones',
         img: 'images/products/iphone-15-pro-1.jpg',
         images: [
@@ -179,7 +179,7 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Variant: 'ZPA/Singapur',
+            variant: 'ZPA/Singapur',
             color: ' White',
             box: 'Yes',
             battery: 'BH-93%',
@@ -187,9 +187,9 @@ const products = [
         },
         // SEO
         seo: {
-    title: 'iPhone 15 pro 128GB in Bangladesh',
-    description: 'Buy used iPhone 15 pro 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 15 pro, iPhone 15 pro Bangladesh, used iPhone 15 pro Bangladesh, iPhone 15 pro 128GB Bangladesh, used phone Bangladesh, iPhone 15 pro Sierra Blue'
+    title: 'iPhone 15 Pro 256GB White in Bangladesh',
+    description: 'Buy used iPhone 15 Pro 256GB in Bangladesh. White colour, 93% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 15 Pro, iPhone 15 Pro Bangladesh, used iPhone 15 Pro Bangladesh, iPhone 15 Pro 256GB Bangladesh, used phone Bangladesh, iPhone 15 Pro White'
 }
     },
     {
@@ -203,7 +203,7 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256GB',
-            Variant: 'LLA',
+            variant: 'LLA',
             color: 'Sierra Blue',
             box: 'Yes',
             battery: 'BH-96%',
@@ -211,7 +211,7 @@ const products = [
         },
         // SEO
         seo: {
-    title: 'iPhone 15 Pro 256GB in Bangladesh',
+    title: 'iPhone 15 Pro 256GB Sierra Blue in Bangladesh',
     description: 'Buy used iPhone 15 Pro 256GB in Bangladesh. Sierra Blue colour, 96% battery health, includes a 14-day replacement guarantee.',
     keywords: 'iPhone 15 Pro, iPhone 15 Pro Bangladesh, used iPhone 15 Pro Bangladesh, iPhone 15 Pro 256GB Bangladesh, used phone Bangladesh, iPhone 15 Pro Sierra Blue'
 }
@@ -227,31 +227,31 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Variant: 'TDRA',
-            color: 'Natural Titenume',
+            variant: 'TDRA',
+            color: 'Natural Titanium',
             box: 'Yes',
             battery: 'BH-86%',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'iPhone 15 Pro Max 128GB in Bangladesh',
-    description: 'Buy used iPhone 15 Pro Max 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 15 Pro Max, iPhone 15 Pro Max Bangladesh, used iPhone 15 Pro Max Bangladesh, iPhone 15 Pro Max 128GB Bangladesh, used phone Bangladesh, iPhone 15 Pro Max Sierra Blue'
+    title: 'iPhone 15 Pro Max 256GB in Bangladesh',
+    description: 'Buy used iPhone 15 Pro Max 256GB in Bangladesh. Natural Titanium colour, 86% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 15 Pro Max, iPhone 15 Pro Max Bangladesh, used iPhone 15 Pro Max Bangladesh, iPhone 15 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 15 Pro Max Natural Titanium'
 }
     },
     {
         id: 11,
         name: 'iPhone 15 Plus',
         cat: 'Pre-owned Phones',
-        img: 'images/products/iphone-13-2.jpg',
+        img: 'images/products/iphone-15-plus.jpg',
         images: [
-            'images/products/iphone-13-2.jpg'
+            'images/products/iphone-15-plus.jpg'
         ],
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '128gb',
-            Variant: 'China',
+            variant: 'China',
             color: 'Paste',
             box: 'Yes',
             battery: 'BH-88%',
@@ -259,9 +259,9 @@ const products = [
         },
         // SEO
         seo: {
-    title: 'iPhone 13 128GB in Bangladesh',
-    description: 'Buy used iPhone 13 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 13, iPhone 13 Bangladesh, used iPhone 13 Bangladesh, iPhone 13 128GB Bangladesh, used phone Bangladesh, iPhone 13 Sierra Blue'
+    title: 'iPhone 15 Plus 128GB in Bangladesh',
+    description: 'Buy used iPhone 15 Plus 128GB in Bangladesh. China variant, 88% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 15 Plus, iPhone 15 Plus Bangladesh, used iPhone 15 Plus Bangladesh, iPhone 15 Plus 128GB Bangladesh, used phone Bangladesh'
 }
     },
     {
@@ -275,17 +275,17 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Variant: 'Japan',
-            color: 'Desert Titanum',
+            variant: 'Japan',
+            color: 'Desert Titanium',
             box: 'Yes',
             battery: 'BH-92%',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'iPhone 16 Pro Max 128GB in Bangladesh',
-    description: 'Buy used iPhone 16 Pro Max 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 16 Pro Max, iPhone 16 Pro Max Bangladesh, used iPhone 16 Pro Max Bangladesh, iPhone 16 Pro Max 128GB Bangladesh, used phone Bangladesh, iPhone 16 Pro Max Sierra Blue'
+    title: 'iPhone 16 Pro Max 256GB (Japan) in Bangladesh',
+    description: 'Buy used iPhone 16 Pro Max 256GB in Bangladesh. Desert Titanium colour, Japan variant, 92% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 16 Pro Max, iPhone 16 Pro Max Bangladesh, used iPhone 16 Pro Max Bangladesh, iPhone 16 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 16 Pro Max Desert Titanium'
 }
     },
     {
@@ -299,17 +299,17 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Variant: 'AE/A',
-            color: 'Desert Titanum',
+            variant: 'AE/A',
+            color: 'Desert Titanium',
             box: 'Yes',
             battery: 'BH-88%',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'iPhone 16 Pro Max 128GB in Bangladesh',
-    description: 'Buy used iPhone 16 Pro Max 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 16 Pro Max, iPhone 16 Pro Max Bangladesh, used iPhone 16 Pro Max Bangladesh, iPhone 16 Pro Max 128GB Bangladesh, used phone Bangladesh, iPhone 16 Pro Max Sierra Blue'
+    title: 'iPhone 16 Pro Max 256GB (AE/A) in Bangladesh',
+    description: 'Buy used iPhone 16 Pro Max 256GB in Bangladesh. Desert Titanium colour, 88% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 16 Pro Max, iPhone 16 Pro Max Bangladesh, used iPhone 16 Pro Max Bangladesh, iPhone 16 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 16 Pro Max Desert Titanium'
 }
     },
     {
@@ -323,8 +323,8 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Variant: 'LLA',
-            color: 'Titanum Black',
+            variant: 'LLA',
+            color: 'Titanium Black',
             box: 'Yes',
             battery: 'BH-90%',
             warranty: '14 Day'
@@ -340,23 +340,23 @@ const products = [
         id: 15,
         name: 'Vivo V30 Pro',
         cat: 'Pre-owned Phones',
-        img: 'images/products/vivo-v30-5g.jpg',
+        img: 'images/products/vivo-v30-pro.jpg',
         images: [
-            'images/products/vivo-v30-5g.jpg'
+            'images/products/vivo-v30-pro.jpg'
         ],
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Ram: '8GB',
+            ram: '8GB',
             color: 'Volcanic Black',
             battery: '5000 MAH',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'Vivo V30 5G 128GB in Bangladesh',
-    description: 'Buy used Vivo V30 5G 128GB in Bangladesh. Volcanic Black colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'Vivo V30 5G, Vivo V30 5G Bangladesh, used Vivo V30 5G Bangladesh, Vivo V30 5G 128GB Bangladesh, used phone Bangladesh, Vivo V30 5G Volcanic Black'
+    title: 'Vivo V30 Pro 256GB in Bangladesh',
+    description: 'Buy used Vivo V30 Pro 256GB in Bangladesh. Volcanic Black colour, 8GB RAM, includes a 14-day replacement guarantee.',
+    keywords: 'Vivo V30 Pro, Vivo V30 Pro Bangladesh, used Vivo V30 Pro Bangladesh, Vivo V30 Pro 256GB Bangladesh, used phone Bangladesh, Vivo V30 Pro Volcanic Black'
 }
     },
     {
@@ -370,16 +370,16 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '512gb',
-            Ram: '12gb',
+            ram: '12gb',
             color: 'Black',
             battery: 'BH-98%',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'Huawei Pura 70 128GB in Bangladesh',
-    description: 'Buy used Huawei Pura 70 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'Huawei Pura 70, Huawei Pura 70 Bangladesh, used Huawei Pura 70 Bangladesh, Huawei Pura 70 128GB Bangladesh, used phone Bangladesh, Huawei Pura 70 Sierra Blue'
+    title: 'Huawei Pura 70 512GB in Bangladesh',
+    description: 'Buy used Huawei Pura 70 512GB in Bangladesh. Black colour, 12GB RAM, 98% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'Huawei Pura 70, Huawei Pura 70 Bangladesh, used Huawei Pura 70 Bangladesh, Huawei Pura 70 512GB Bangladesh, used phone Bangladesh, Huawei Pura 70 Black'
 }
     },
     {
@@ -393,22 +393,22 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Ran: '8gb',
-            color: 'Orenge',
+            ram: '8gb',
+            color: 'Orange',
             box: 'Yes',
             battery: '5000mah',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'Redmi Note12 128GB in Bangladesh',
-    description: 'Buy used Redmi Note12 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'Redmi Note12, Redmi Note12 Bangladesh, used Redmi Note12 Bangladesh, Redmi Note12 128GB Bangladesh, used phone Bangladesh, Redmi Note12 Sierra Blue'
+    title: 'Redmi Note 12 256GB in Bangladesh',
+    description: 'Buy used Redmi Note 12 256GB in Bangladesh. Orange colour, 8GB RAM, includes a 14-day replacement guarantee.',
+    keywords: 'Redmi Note 12, Redmi Note 12 Bangladesh, used Redmi Note 12 Bangladesh, Redmi Note 12 256GB Bangladesh, used phone Bangladesh, Redmi Note 12 Orange'
 }
     },
     {
         id: 18,
-        name: 'Iphone 12 Pro Max',
+        name: 'iPhone 12 Pro Max',
         cat: 'Pre-owned Phones',
         img: 'images/products/Iphone 12 Pro Max.jfif',
         images: [
@@ -417,21 +417,21 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Variant: 'ZAA',
+            variant: 'ZAA',
             color: 'Black',
             battery: 'BH-81%',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'Redmi Note12 128GB in Bangladesh',
-    description: 'Buy used Redmi Note12 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'Redmi Note12, Redmi Note12 Bangladesh, used Redmi Note12 Bangladesh, Redmi Note12 128GB Bangladesh, used phone Bangladesh, Redmi Note12 Sierra Blue'
+    title: 'iPhone 12 Pro Max 256GB in Bangladesh',
+    description: 'Buy used iPhone 12 Pro Max 256GB in Bangladesh. Black colour, 81% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 12 Pro Max, iPhone 12 Pro Max Bangladesh, used iPhone 12 Pro Max Bangladesh, iPhone 12 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 12 Pro Max Black'
 }
     },
     {
         id: 19,
-        name: 'Iphone 17 Pro',
+        name: 'iPhone 17 Pro',
         cat: 'Pre-owned Phones',
         img: 'images/products/Iphone 17 Pro.jfif',
         images: [
@@ -440,17 +440,17 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Variant: 'China Dual Sim',
+            variant: 'China Dual Sim',
             color: 'White',
-            Box: 'Yes',
+            box: 'Yes',
             battery: 'BH-91%',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'Redmi Note12 128GB in Bangladesh',
-    description: 'Buy used Redmi Note12 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'Redmi Note12, Redmi Note12 Bangladesh, used Redmi Note12 Bangladesh, Redmi Note12 128GB Bangladesh, used phone Bangladesh, Redmi Note12 Sierra Blue'
+    title: 'iPhone 17 Pro 256GB in Bangladesh',
+    description: 'Buy used iPhone 17 Pro 256GB in Bangladesh. White colour, 91% battery health, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 17 Pro, iPhone 17 Pro Bangladesh, used iPhone 17 Pro Bangladesh, iPhone 17 Pro 256GB Bangladesh, used phone Bangladesh, iPhone 17 Pro White'
 }
     },
     {
@@ -464,16 +464,16 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Ram: '8gb',
+            ram: '8gb',
             color: 'Black',
-            Box: 'Yes',
+            box: 'Yes',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'Redmi Note12 128GB in Bangladesh',
-    description: 'Buy used Redmi Note12 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'Redmi Note12, Redmi Note12 Bangladesh, used Redmi Note12 Bangladesh, Redmi Note12 128GB Bangladesh, used phone Bangladesh, Redmi Note12 Sierra Blue'
+    title: 'Nord CE5 256GB in Bangladesh',
+    description: 'Buy used OnePlus Nord CE5 256GB in Bangladesh. Black colour, 8GB RAM, includes a 14-day replacement guarantee.',
+    keywords: 'Nord CE5, Nord CE5 Bangladesh, used Nord CE5 Bangladesh, Nord CE5 256GB Bangladesh, used phone Bangladesh, Nord CE5 Black'
 }
     },
     {
@@ -487,20 +487,20 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '128gb',
-            Variant: 'Japan',
-            color: 'Yollow',
+            variant: 'Japan',
+            color: 'Yellow',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'Redmi Note12 128GB in Bangladesh',
-    description: 'Buy used Redmi Note12 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'Redmi Note12, Redmi Note12 Bangladesh, used Redmi Note12 Bangladesh, Redmi Note12 128GB Bangladesh, used phone Bangladesh, Redmi Note12 Sierra Blue'
+    title: 'Google Pixel 7 128GB in Bangladesh',
+    description: 'Buy used Google Pixel 7 128GB in Bangladesh. Yellow colour, Japan variant, includes a 14-day replacement guarantee.',
+    keywords: 'Pixel 7, Google Pixel 7 Bangladesh, used Pixel 7 Bangladesh, Pixel 7 128GB Bangladesh, used phone Bangladesh, Pixel 7 Yellow'
 }
     },
     {
         id: 22,
-        name: 'Iphone 16',
+        name: 'iPhone 16',
         cat: 'Pre-owned Phones',
         img: 'images/products/Iphone 16.jfif',
         images: [
@@ -509,21 +509,21 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '128gb',
-            Variant: 'Indian',
+            variant: 'Indian',
             color: 'Black',
-            Box: 'Yes',
+            box: 'Yes',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'Redmi Note12 128GB in Bangladesh',
-    description: 'Buy used Redmi Note12 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'Redmi Note12, Redmi Note12 Bangladesh, used Redmi Note12 Bangladesh, Redmi Note12 128GB Bangladesh, used phone Bangladesh, Redmi Note12 Sierra Blue'
+    title: 'iPhone 16 128GB in Bangladesh',
+    description: 'Buy used iPhone 16 128GB in Bangladesh. Black colour, Indian variant, includes a 14-day replacement guarantee.',
+    keywords: 'iPhone 16, iPhone 16 Bangladesh, used iPhone 16 Bangladesh, iPhone 16 128GB Bangladesh, used phone Bangladesh, iPhone 16 Black'
 }
     },
     {
         id: 23,
-        name: 'Samsung S-24 Ultra',
+        name: 'Samsung Galaxy S24 Ultra',
         cat: 'Pre-owned Phones',
         img: 'images/products/Samsung S-24 Ultra.jfif',
         images: [
@@ -532,16 +532,16 @@ const products = [
         desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
         specs: {
             storage: '256gb',
-            Variant: 'TDRA',
-            color: 'Titunem White',
-            Box: 'Yes',
+            variant: 'TDRA',
+            color: 'Titanium White',
+            box: 'Yes',
             warranty: '14 Day'
         },
         // SEO
         seo: {
-    title: 'Redmi Note12 128GB in Bangladesh',
-    description: 'Buy used Redmi Note12 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'Redmi Note12, Redmi Note12 Bangladesh, used Redmi Note12 Bangladesh, Redmi Note12 128GB Bangladesh, used phone Bangladesh, Redmi Note12 Sierra Blue'
+    title: 'Samsung Galaxy S24 Ultra 256GB in Bangladesh',
+    description: 'Buy used Samsung Galaxy S24 Ultra 256GB in Bangladesh. Titanium White colour, TDRA variant, includes a 14-day replacement guarantee.',
+    keywords: 'Samsung Galaxy S24 Ultra, Samsung S24 Ultra Bangladesh, used Samsung S24 Ultra Bangladesh, Samsung S24 Ultra 256GB Bangladesh, used phone Bangladesh, Samsung S24 Ultra Titanium White'
 }
     },
 // =====================================================
@@ -571,9 +571,9 @@ const products = [
         },
         // SEO
         seo: {
-            title: 'Apple 20W USB-C Power Adapter in Bangladesh',
-            description: 'Buy Apple 20W USB-C Power Adapter in Bangladesh. Fast charging USB-C power adapter for compatible Apple devices.',
-            keywords: 'Apple 20W charger, Apple USB-C power adapter, Apple charger Bangladesh, 20W fast charger'
+            title: 'Apple 20W USB-C Power Adapter (Indian Variant) in Bangladesh',
+            description: 'Buy Apple 20W USB-C Power Adapter (Indian Variant) in Bangladesh. Fast charging USB-C power adapter for compatible Apple devices.',
+            keywords: 'Apple 20W charger, Apple USB-C power adapter, Apple charger Bangladesh, 20W fast charger, Apple Indian variant charger'
         }
     },
     {
@@ -597,9 +597,9 @@ const products = [
         },
         // SEO
         seo: {
-            title: 'Apple 20W USB-C Power Adapter in Bangladesh',
-            description: 'Buy Apple 20W USB-C Power Adapter in Bangladesh. Fast charging USB-C power adapter for compatible Apple devices.',
-            keywords: 'Apple 20W charger, Apple USB-C power adapter, Apple charger Bangladesh, 20W fast charger'
+            title: 'Apple 20W USB-C Power Adapter (Dubai Variant) in Bangladesh',
+            description: 'Buy Apple 20W USB-C Power Adapter (Dubai Variant) in Bangladesh. Fast charging USB-C power adapter for compatible Apple devices.',
+            keywords: 'Apple 20W charger, Apple USB-C power adapter, Apple charger Bangladesh, 20W fast charger, Apple Dubai variant charger'
         }
     },
     {
@@ -614,7 +614,7 @@ const products = [
         ],
         price: 2500,             // Sale price (৳)
         oldPrice: 3000,          // Regular price (৳)
-        desc: 'Apple Original USB-C Power Adapter (Dubai Variant) with fast, reliable charging for compatible devices. Compact, durable and ideal for everyday use. ',
+        desc: 'Samsung Original PD Power Adapter with fast, reliable charging for compatible devices. Compact, durable and ideal for everyday use. ',
         specs: {
             type: '20W Fast Charger',
             connector: 'USB-C',
@@ -623,9 +623,9 @@ const products = [
         },
         // SEO
         seo: {
-            title: 'Apple 20W USB-C Power Adapter in Bangladesh',
-            description: 'Buy Apple 20W USB-C Power Adapter in Bangladesh. Fast charging USB-C power adapter for compatible Apple devices.',
-            keywords: 'Apple 20W charger, Apple USB-C power adapter, Apple charger Bangladesh, 20W fast charger'
+            title: 'Samsung 20W PD Adapter in Bangladesh',
+            description: 'Buy Samsung 20W PD Power Adapter in Bangladesh. Fast charging USB-C power adapter for compatible Samsung devices.',
+            keywords: 'Samsung PD adapter, Samsung 20W charger, Samsung charger Bangladesh, 20W fast charger'
         }
     },
     {
@@ -640,7 +640,7 @@ const products = [
         ],
         price: 2000,             // Sale price (৳)
         oldPrice: 2500,          // Regular price (৳)
-        desc: 'Apple Original USB-C Power Adapter (Dubai Variant) with fast, reliable charging for compatible devices. Compact, durable and ideal for everyday use. ',
+        desc: 'Romoss fast charger with reliable, safe charging for compatible devices. Compact, durable and ideal for everyday use. ',
         specs: {
             type: '20W Fast Charger',
             connector: 'USB-C',
@@ -649,9 +649,9 @@ const products = [
         },
         // SEO
         seo: {
-            title: 'Apple 20W USB-C Power Adapter in Bangladesh',
-            description: 'Buy Apple 20W USB-C Power Adapter in Bangladesh. Fast charging USB-C power adapter for compatible Apple devices.',
-            keywords: 'Apple 20W charger, Apple USB-C power adapter, Apple charger Bangladesh, 20W fast charger'
+            title: 'Romoss 20W Fast Charger in Bangladesh',
+            description: 'Buy Romoss 20W Fast Charger in Bangladesh. Reliable USB-C fast charging adapter for everyday use.',
+            keywords: 'Romoss charger, Romoss fast charger Bangladesh, Romoss adapter, 20W fast charger'
         }
     }
 ];

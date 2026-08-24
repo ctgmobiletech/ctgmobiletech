@@ -560,6 +560,8 @@ const products = [
             'images/products/Apple Orginal2.jfif',
             'images/products/Apple Orginal3.jfif'
         ],
+        price: 4000,             // Sale price (৳)
+        oldPrice: 4500,          // Regular price (৳)
         desc: 'Apple Original USB-C Power Adapter (Indian Variant) with fast, reliable charging for compatible devices. Compact, durable and ideal for everyday use. ',
         specs: {
             type: '20W Fast Charger',
@@ -584,6 +586,8 @@ const products = [
             'images/products/Apple USB-C Power Adapter1.jfif',
             'images/products/Apple USB-C Power Adapter2.jfif'
         ],
+        price: 4000,             // Sale price (৳)
+        oldPrice: 4500,          // Regular price (৳)
         desc: 'Apple Original USB-C Power Adapter (Dubai Variant) with fast, reliable charging for compatible devices. Compact, durable and ideal for everyday use. ',
         specs: {
             type: '20W Fast Charger',
@@ -608,6 +612,8 @@ const products = [
             'images/products/Samsung PD Adapter1.jfif',
             'images/products/Samsung PD Adapter2.jfif'
         ],
+        price: 2500,             // Sale price (৳)
+        oldPrice: 3000,          // Regular price (৳)
         desc: 'Apple Original USB-C Power Adapter (Dubai Variant) with fast, reliable charging for compatible devices. Compact, durable and ideal for everyday use. ',
         specs: {
             type: '20W Fast Charger',
@@ -632,6 +638,8 @@ const products = [
             'images/products/Romoss1.jpeg',
             'images/products/Romoss2.jpeg'
         ],
+        price: 2000,             // Sale price (৳)
+        oldPrice: 2500,          // Regular price (৳)
         desc: 'Apple Original USB-C Power Adapter (Dubai Variant) with fast, reliable charging for compatible devices. Compact, durable and ideal for everyday use. ',
         specs: {
             type: '20W Fast Charger',

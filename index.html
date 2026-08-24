@@ -391,8 +391,8 @@ src="https://www.facebook.com/tr?id=2411182092622687&ev=PageView&noscript=1"
     .product-img {
         width: 100%;
         height: 200px;
-        object-fit: cover;
-        background: #eee;
+        object-fit: contain;
+        background: #f4f7fd;
         cursor: pointer;
     }
 
@@ -740,6 +740,47 @@ src="https://www.facebook.com/tr?id=2411182092622687&ev=PageView&noscript=1"
         .detail-cta-row { flex-direction: column; }
         .detail-info h2 { font-size: 1.3rem; }
     }
+
+/* ===== Accessories cart / price ===== */
+.accessory-price-box{margin:8px 0 10px}
+.accessory-price{font-weight:800;font-size:1rem;color:#5b2db0}
+.accessory-old-price{text-decoration:line-through;color:#999;font-size:.8rem;margin-left:6px}
+.accessory-discount{display:inline-block;margin-left:6px;padding:2px 6px;border-radius:10px;background:#e8f7ec;color:#13833b;font-size:.7rem;font-weight:800}
+.btn-cart{background:#16833b;color:#fff;padding:.55rem .75rem;border-radius:20px;font-weight:700;font-size:.78rem;flex:1}
+.cart-fab{position:fixed;right:18px;bottom:18px;z-index:1500;background:#5b2db0;color:#fff;border:0;border-radius:999px;padding:12px 16px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.cart-count{background:#fff;color:#5b2db0;border-radius:50%;padding:2px 7px;margin-left:4px}
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:3000;display:none;align-items:center;justify-content:center;padding:15px}
+.cart-overlay.open{display:flex}
+.cart-modal{width:min(560px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:16px;padding:20px}
+.cart-head{display:flex;justify-content:space-between;align-items:center}
+.cart-close{border:0;border-radius:50%;width:34px;height:34px;font-size:20px}
+.cart-item{display:grid;grid-template-columns:58px 1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid #eee}
+.cart-item img{width:58px;height:58px;object-fit:contain;background:#f5f6fa;border-radius:8px}
+.cart-item h4{margin:0 0 4px;font-size:.9rem}
+.cart-qty{display:flex;gap:5px;align-items:center}
+.cart-qty button{width:28px;height:28px;border:0;border-radius:6px;background:#eee}
+.cart-total{text-align:right;font-weight:800;padding:14px 0}
+.cod-form{border-top:1px solid #eee;padding-top:14px}
+.cod-form input,.cod-form textarea{width:100%;box-sizing:border-box;padding:10px;margin:0 0 9px;border:1px solid #ddd;border-radius:8px}
+.cod-form textarea{min-height:75px}
+.cod-submit{width:100%;border:0;border-radius:22px;padding:12px;background:#5b2db0;color:#fff;font-weight:800}
+.cart-empty{text-align:center;color:#888;padding:25px}
+@media(max-width:480px){.cart-fab{right:10px;bottom:10px}.cart-item{grid-template-columns:52px 1fr auto}.cart-item img{width:52px;height:52px}}
+
+
+.detail-accessory-actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;}
+.detail-accessory-actions button{border:0;cursor:pointer;padding:11px 18px;border-radius:24px;font-weight:800;}
+.detail-accessory-actions .btn-cart{flex:1;min-width:150px;}
+.btn-buy-now{flex:1;min-width:150px;background:#111;color:#fff;}
+
+    #orderMessage[readonly] {
+        background:#f5f6f9;
+        color:#333;
+        cursor:not-allowed;
+        resize:none;
+        border-color:#ddd;
+    }
+
 </style>
 </head>
 <body>
@@ -816,6 +857,11 @@ src="https://www.facebook.com/tr?id=2411182092622687&ev=PageView&noscript=1"
                 <p class="detail-desc" id="detailDesc"></p>
                 <div class="detail-specs" id="detailSpecs"></div>
                 <div class="detail-benefits" id="detailBenefits"></div>
+                <div id="detailAccessoryPrice"></div>
+                <div id="detailAccessoryActions" class="detail-accessory-actions" style="display:none;">
+                    <button type="button" class="btn-cart" id="detailAddToCart">🛒 Add to Cart</button>
+                    <button type="button" class="btn-buy-now" id="detailBuyNow">⚡ Buy Now</button>
+                </div>
             </div>
         </div>
     </div>
@@ -846,6 +892,26 @@ src="https://www.facebook.com/tr?id=2411182092622687&ev=PageView&noscript=1"
 <!-- ================================================================
      ④ FOOTER — HTML
      ================================================================ -->
+
+<button class="cart-fab" id="cartFab" type="button">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+<div class="cart-overlay" id="cartOverlay">
+<div class="cart-modal">
+<div class="cart-head"><h2>Accessories Cart</h2><button class="cart-close" id="cartClose" type="button">×</button></div>
+<div id="cartItems"></div>
+<div class="cart-total" id="cartTotal">Total: ৳0</div>
+<div class="cod-form">
+<h3>Cash on Delivery Order</h3>
+<form action="https://api.web3forms.com/submit" method="POST" id="codOrderForm">
+<input type="hidden" name="access_key" value="f02e52d8-ccde-4681-a533-cf0cf2d3cbd2">
+<input type="hidden" name="subject" value="New Accessories Cash on Delivery Order - CTG Mobile Tech">
+<input type="hidden" name="order_items" id="orderItemsField">
+<input type="hidden" name="order_total" id="orderTotalField">
+<input type="text" name="name" placeholder="Customer Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<input type="text" name="address" placeholder="Delivery Address" required>
+<textarea name="message" id="orderMessage" placeholder="Order details" readonly required aria-readonly="true"></textarea>
+<button class="cod-submit" type="submit">Place COD Order</button>
+</form></div></div></div>
 <footer id="contact">
     <div class="footer-content">
         <div class="footer-column">
@@ -1014,14 +1080,36 @@ function renderCategories() {
     });
 }
 
+function isAccessory(p) {
+    return p && String(p.cat).toLowerCase() === 'accessories';
+}
+function bdt(n) {
+    return `৳${Number(n || 0).toLocaleString('en-BD')}`;
+}
+function accessoryPriceHTML(p) {
+    if (!isAccessory(p)) return '';
+    const price = Number(p.price || 0);
+    const old = Number(p.oldPrice || 0);
+    const disc = (old > price && price > 0)
+        ? Math.round(((old - price) / old) * 100)
+        : 0;
+    return `<div class="accessory-price-box">
+        <span class="accessory-price">${price ? bdt(price) : 'Price not set'}</span>
+        ${old > price && price > 0 ? `<span class="accessory-old-price">${bdt(old)}</span>` : ''}
+        ${disc > 0 ? `<span class="accessory-discount">${disc}% OFF</span>` : ''}
+    </div>`;
+}
 function productCardHTML(p) {
+    const accessory = isAccessory(p);
     return `
         <div class="product-card">
             <img src="${p.img}" alt="${p.name}" class="product-img" data-id="${p.id}">
             <div class="product-info">
                 <h3 data-id="${p.id}">${p.name}</h3>
+                ${accessoryPriceHTML(p)}
                 <div class="btn-row">
-                    <button class="btn-details" data-id="${p.id}">Details</button>
+                    ${accessory ? `<button class="btn-cart" type="button" data-cart-id="${p.id}">🛒 Add to Cart</button>` : ''}
+                    <button class="btn-details" data-id="${p.id}" type="button">Details</button>
                 </div>
             </div>
         </div>`;
@@ -1058,6 +1146,77 @@ function renderProducts() {
         btn.addEventListener('click', () => openProductDetail(Number(btn.dataset.id)));
     });
 }
+
+
+/* ================================================================
+   ACCESSORIES CART + CASH ON DELIVERY
+   ================================================================ */
+let accessoryCart = JSON.parse(localStorage.getItem('ctgAccessoryCart') || '[]');
+
+function cartProduct(id) {
+    return products.find(p => Number(p.id) === Number(id));
+}
+function cartPrice(p) {
+    return Number(p && p.price || 0);
+}
+function renderCart() {
+    const box=document.getElementById('cartItems'), count=document.getElementById('cartCount'), total=document.getElementById('cartTotal');
+    if(!box) return;
+    let qty=0, sum=0;
+    if(!accessoryCart.length){
+        box.innerHTML='<div class="cart-empty">Your accessories cart is empty.</div>';
+    } else {
+        box.innerHTML=accessoryCart.map(i=>{
+            const p=cartProduct(i.id);
+            if(!p) return '';
+            qty+=i.qty; sum+=cartPrice(p)*i.qty;
+            return `<div class="cart-item">
+                <img src="${p.img}" alt="${p.name}">
+                <div><h4>${p.name}</h4><div>${bdt(cartPrice(p))} × ${i.qty}</div></div>
+                <div class="cart-qty">
+                    <button type="button" data-qid="${p.id}" data-d="-1">−</button>
+                    <strong>${i.qty}</strong>
+                    <button type="button" data-qid="${p.id}" data-d="1">+</button>
+                </div>
+            </div>`;
+        }).join('');
+    }
+    count.textContent=qty;
+    total.textContent=`Total: ${bdt(sum)}`;
+    document.getElementById('orderItemsField').value=accessoryCart.map(i=>{
+        const p=cartProduct(i.id); return p ? `${p.name} — Qty: ${i.qty} — ${bdt(cartPrice(p)*i.qty)}` : '';
+    }).filter(Boolean).join('\n');
+    document.getElementById('orderTotalField').value=bdt(sum);
+    document.getElementById('orderMessage').value=accessoryCart.length
+        ? accessoryCart.map(i=>{const p=cartProduct(i.id);return `${p.name} — Qty: ${i.qty} — ${bdt(cartPrice(p)*i.qty)}`}).join('\n')+`\nTotal: ${bdt(sum)}\nPayment: Cash on Delivery`
+        : '';
+    localStorage.setItem('ctgAccessoryCart',JSON.stringify(accessoryCart));
+}
+function addAccessory(id){
+    const p=cartProduct(id);
+    if(!p || !isAccessory(p)) return;
+    const existing=accessoryCart.find(i=>Number(i.id)===Number(id));
+    if(existing) existing.qty++;
+    else accessoryCart.push({id:p.id,qty:1});
+    renderCart();
+}
+document.addEventListener('click',e=>{
+    const add=e.target.closest('[data-cart-id]');
+    if(add) addAccessory(Number(add.dataset.cartId));
+    const q=e.target.closest('[data-qid]');
+    if(q){
+        const item=accessoryCart.find(i=>Number(i.id)===Number(q.dataset.qid));
+        if(item){item.qty+=Number(q.dataset.d); if(item.qty<=0) accessoryCart=accessoryCart.filter(i=>i!==item); renderCart();}
+    }
+});
+document.getElementById('cartFab').addEventListener('click',()=>{renderCart();document.getElementById('cartOverlay').classList.add('open')});
+document.getElementById('cartClose').addEventListener('click',()=>document.getElementById('cartOverlay').classList.remove('open'));
+document.getElementById('cartOverlay').addEventListener('click',e=>{if(e.target.id==='cartOverlay')e.currentTarget.classList.remove('open')});
+document.getElementById('codOrderForm').addEventListener('submit',e=>{
+    if(!accessoryCart.length){e.preventDefault();alert('Please add an accessory to the cart first.');return;}
+    renderCart();
+});
+renderCart();
 
 /* ================================================================
    HAPPY CUSTOMERS — Testimonials
@@ -1116,6 +1275,22 @@ function openProductDetail(id) {
     if (!p) return;
     currentDetailId = id;
 
+    const detailActions = document.getElementById('detailAccessoryActions');
+    if (detailActions) detailActions.style.display = isAccessory(p) ? 'flex' : 'none';
+    const detailAdd = document.getElementById('detailAddToCart');
+    const detailBuy = document.getElementById('detailBuyNow');
+    if (detailAdd) {
+        detailAdd.onclick = () => addAccessory(p.id);
+    }
+    if (detailBuy) {
+        detailBuy.onclick = () => {
+            if (!isAccessory(p)) return;
+            accessoryCart = [{id:p.id, qty:1}];
+            renderCart();
+            document.getElementById('cartOverlay').classList.add('open');
+        };
+    }
+
     // Meta Pixel: track product detail views
     if (typeof fbq === 'function') {
         fbq('track', 'ViewContent', {
@@ -1129,6 +1304,7 @@ function openProductDetail(id) {
 
     document.getElementById('detailName').textContent = p.name;
     document.getElementById('detailDesc').textContent = p.desc || '';
+    document.getElementById('detailAccessoryPrice').innerHTML = accessoryPriceHTML(p);
 
     const specLabels = {
         storage: 'Storage',

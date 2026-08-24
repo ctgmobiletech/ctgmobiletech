@@ -33,6 +33,27 @@
 <meta name="twitter:title" content="CTG Mobile Tech — Your Tech Destination in Chattogram">
 <meta name="twitter:description" content="Genuine pre-owned and new phones, plus phone accessories in Chattogram, Bangladesh. 14-day replacement guarantee.">
 <meta name="twitter:image" content="images/banner.png">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2411182092622687');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2411182092622687&ev=PageView&noscript=1"
+/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
 /* ================================================================
    CSS SECTION MAP
@@ -1095,6 +1116,15 @@ function openProductDetail(id) {
     if (!p) return;
     currentDetailId = id;
 
+    // Meta Pixel: track product detail views
+    if (typeof fbq === 'function') {
+        fbq('track', 'ViewContent', {
+            content_name: p.name,
+            content_ids: [String(p.id)],
+            content_type: 'product'
+        });
+    }
+
     const imgs = (p.images && p.images.length) ? p.images : [p.img];
 
     document.getElementById('detailName').textContent = p.name;
@@ -1189,6 +1219,31 @@ renderCategories();
 renderProducts();
 renderTestimonials();
 renderVideos();
+
+/* ================================================================
+   META PIXEL — Contact / Lead click tracking
+   ================================================================ */
+document.addEventListener('click', (event) => {
+    const link = event.target.closest('a');
+    if (!link || typeof fbq !== 'function') return;
+
+    const href = (link.getAttribute('href') || '').toLowerCase();
+
+    // Track Facebook Page / Messenger clicks as Contact
+    if (href.includes('facebook.com') || href.includes('m.me')) {
+        fbq('track', 'Contact', {
+            content_name: 'Facebook / Messenger Contact'
+        });
+        return;
+    }
+
+    // Track phone clicks as Lead
+    if (href.startsWith('tel:')) {
+        fbq('track', 'Lead', {
+            content_name: 'Phone Contact'
+        });
+    }
+});
 
 /* ================================================================
    PWA — Install App বাটন ও Service Worker

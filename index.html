@@ -968,7 +968,7 @@ src="https://www.facebook.com/tr?id=2411182092622687&ev=PageView&noscript=1"
             <label for="orderMessage">🛒 Order Summary</label>
             <textarea name="message" id="orderMessage" placeholder="Order details" readonly required aria-readonly="true"></textarea>
         </div>
-        <button class="cod-submit" id="codSubmitBtn" type="submit">✅ Confirm COD Order</button>
+        <button class="cod-submit" id="codSubmitBtn" type="submit">✅ Confirm Order</button>
         <div class="cod-secure">🔒 আপনার তথ্য নিরাপদে সংরক্ষণ করা হবে।</div>
     </form>
 
@@ -1322,7 +1322,7 @@ document.getElementById('codOrderForm').addEventListener('submit', async (e)=>{
         console.error('Order submission error:', error);
         alert('দুঃখিত, অর্ডার পাঠানো যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।');
         btn.disabled = false;
-        btn.textContent = '✅ Confirm COD Order';
+        btn.textContent = '✅ Confirm Order';
     }
 });
 

@@ -1395,10 +1395,23 @@ function renderVideos() {
 
 /* ===== Product Details (landing page) ===== */
 
-function openProductDetail(id) {
+function openProductDetail(id, options = {}) {
     const p = products.find(pr => pr.id === id);
     if (!p) return;
+
+    const { updateHistory = true, scroll = true } = options;
     currentDetailId = id;
+
+    // Make every product a real, shareable URL such as ?id=1.
+    // When opened from the product grid, add a browser-history entry so
+    // the browser Back button returns to the product list instead of
+    // leaving the website.
+    if (updateHistory) {
+        const url = new URL(window.location.href);
+        url.search = '';
+        url.searchParams.set('id', String(id));
+        history.pushState({ page: 'product', id: Number(id) }, '', url);
+    }
 
     const detailActions = document.getElementById('detailAccessoryActions');
     if (detailActions) detailActions.style.display = isAccessory(p) ? 'flex' : 'none';
@@ -1479,7 +1492,9 @@ function openProductDetail(id) {
         .map(b => `<div class="detail-benefit-item"><span class="tick">✔</span><span>${b}</span></div>`).join('');
 
     document.getElementById('productDetail').classList.add('active');
-    document.getElementById('productDetail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (scroll) {
+        document.getElementById('productDetail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 
     // Update page title/meta tags for this product (function lives in products.js)
     if (typeof updateProductSEO === 'function') updateProductSEO(p);
@@ -1487,13 +1502,70 @@ function openProductDetail(id) {
 
 function closeProductDetail() {
     document.getElementById('productDetail').classList.remove('active');
+    currentDetailId = null;
     restoreDefaultSEO();
 }
 
+/* ================================================================
+   PRODUCT URL + BROWSER HISTORY
+   - /index.html?id=5 opens product 5 directly (ideal for ads).
+   - Clicking a product creates a unique URL without reloading.
+   - Browser Back returns to the previous in-site view.
+   - Direct ad landing creates a Home history entry first, so Back
+     returns to the product list instead of leaving the website.
+   ================================================================ */
+function getProductIdFromURL() {
+    const id = new URLSearchParams(window.location.search).get('id');
+    if (!id) return null;
+    const product = getProductById(id);
+    return product ? Number(product.id) : null;
+}
+
+function showHomeFromHistory() {
+    closeProductDetail();
+    document.getElementById('mainSections').style.display = '';
+    document.getElementById('productDetail').classList.remove('active');
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function handleInitialProductURL() {
+    const id = getProductIdFromURL();
+
+    if (!id) {
+        history.replaceState({ page: 'home' }, '', window.location.href);
+        return;
+    }
+
+    // Direct visit/ad click: make the product URL the current state,
+    // while creating a Home state immediately behind it.
+    const productURL = new URL(window.location.href);
+    history.replaceState({ page: 'home' }, '', productURL.pathname + productURL.hash);
+    productURL.search = '';
+    productURL.searchParams.set('id', String(id));
+    history.pushState({ page: 'product', id }, '', productURL);
+
+    openProductDetail(id, { updateHistory: false, scroll: false });
+}
+
+window.addEventListener('popstate', (event) => {
+    const id = getProductIdFromURL();
+
+    if (id) {
+        openProductDetail(id, { updateHistory: false, scroll: true });
+    } else {
+        showHomeFromHistory();
+    }
+});
+
 document.getElementById('detailBack').addEventListener('click', (e) => {
     e.preventDefault();
-    closeProductDetail();
-    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+
+    // Use browser history so the URL and Back button stay synchronized.
+    if (history.state && history.state.page === 'product') {
+        history.back();
+    } else {
+        showHomeFromHistory();
+    }
 });
 
 /* ================================================================
@@ -1521,6 +1593,9 @@ renderCategories();
 renderProducts();
 renderTestimonials();
 renderVideos();
+
+// Open a product immediately when the page is loaded with ?id=PRODUCT_ID.
+handleInitialProductURL();
 
 /* ================================================================
    META PIXEL — Contact / Lead click tracking

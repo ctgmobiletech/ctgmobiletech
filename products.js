@@ -17,62 +17,28 @@ const products = [
             color: 'Sierra Blue',
             battery: 'BH-87%',
             warranty: '14 Day'
-        },
-       // SEO
-        seo: {
-    title: 'iPhone 12 Pro 256GB in Bangladesh',
-    description: 'Buy used iPhone 12 Pro 256GB in Bangladesh. Sierra Blue colour, 91% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 12 Pro, iPhone 12 Pro Bangladesh, used iPhone 12 Pro Bangladesh, iPhone 12 Pro 256GB Bangladesh, used phone Bangladesh, iPhone 12 Pro Sierra Blue'
-}
+        }
     },
+    // 🔀 একই ফোনের একাধিক ইউনিট (আলাদা storage/color/variant) এখানে
+    // একটাই প্রোডাক্টে "/" দিয়ে জোড়া দেওয়া হলো, যাতে প্রোডাক্ট সংখ্যা কমে।
     {
         id: 2,
         name: 'iPhone 14 Pro Max',
         cat: 'Pre-owned Phones',
         img: 'images/products/iphone-14-pro-max-1.jpg',
         images: [
-            'images/products/iphone-14-pro-max-1.jpg'
+            'images/products/iphone-14-pro-max-1.jpg',
+            'images/products/iphone-14-pro-max-2.jpg'
         ],
-        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
+        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply). Storage, colour and battery health vary by the unit currently in stock — message us to confirm the exact specs and price.',
         specs: {
-            storage: '128gb',
-            variant: 'TDRA',
-            color: 'gold',
+            storage: '128GB/256GB/512GB',
+            color: 'Gold/Purple',
+            variant: 'TDRA, YC/A, ZPA/Singapore, ZA/A, AA/A',
             box: 'Yes',
-            battery: 'BH-84%',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 14 Pro Max 128GB (TDRA) in Bangladesh',
-    description: 'Buy used iPhone 14 Pro Max 128GB in Bangladesh. Gold colour, TDRA variant, 84% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 128GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Gold'
-}
+        }
     },
-    {
-        id: 3,
-        name: 'iPhone 14 Pro Max',
-        cat: 'Pre-owned Phones',
-        img: 'images/products/iphone-14-pro-max-1.jpg',
-        images: [
-            'images/products/iphone-14-pro-max-1.jpg'
-        ],
-        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
-        specs: {
-            storage: '512gb',
-            variant: 'YC/A',
-            color: 'gold',
-            box: 'Yes',
-            battery: 'BH-88%',
-            warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 14 Pro Max 512GB in Bangladesh',
-    description: 'Buy used iPhone 14 Pro Max 512GB in Bangladesh. Gold colour, 88% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 512GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Gold'
-}
-   },
     {
         id: 4,
         name: 'iPhone 14',
@@ -88,85 +54,7 @@ const products = [
             color: 'White',
             battery: 'BH-88%',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 14 128GB in Bangladesh',
-    description: 'Buy used iPhone 14 128GB in Bangladesh. White colour, China variant, 88% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 14, iPhone 14 Bangladesh, used iPhone 14 Bangladesh, iPhone 14 128GB Bangladesh, used phone Bangladesh, iPhone 14 White'
-}
-    },
-    {
-        id: 5,
-        name: 'iPhone 14 Pro Max',
-        cat: 'Pre-owned Phones',
-        img: 'images/products/iphone-14-pro-max-2.jpg',
-        images: [
-            'images/products/iphone-14-pro-max-2.jpg'
-        ],
-        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
-        specs: {
-            storage: '128gb',
-            variant: 'ZPA/Singapur',
-            color: 'Purple',
-            box: 'Yes',
-            battery: 'BH-87%',
-            warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 14 Pro Max 128GB (Singapore) in Bangladesh',
-    description: 'Buy used iPhone 14 Pro Max 128GB in Bangladesh. Purple colour, Singapore variant, 87% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 128GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Purple'
-}
-    },
-    {
-        id: 6,
-        name: 'iPhone 14 Pro Max',
-        cat: 'Pre-owned Phones',
-        img: 'images/products/iphone-14-pro-max-2.jpg',
-        images: [
-            'images/products/iphone-14-pro-max-2.jpg'
-        ],
-        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
-        specs: {
-            storage: '256gb',
-            variant: 'ZA/A',
-            color: 'Purple',
-            box: 'Yes',
-            battery: 'BH-90%',
-            warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 14 Pro Max 256GB (ZA/A) in Bangladesh',
-    description: 'Buy used iPhone 14 Pro Max 256GB in Bangladesh. Purple colour, 90% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Purple'
-}
-    },
-    {
-        id: 7,
-        name: 'iPhone 14 Pro Max',
-        cat: 'Pre-owned Phones',
-        img: 'images/products/iphone-14-pro-max-2.jpg',
-        images: [
-            'images/products/iphone-14-pro-max-2.jpg'
-        ],
-        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
-        specs: {
-            storage: '256gb',
-            variant: 'AA/A',
-            color: 'Purple',
-            box: 'Yes',
-            battery: 'BH-88%',
-            warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 14 Pro Max 256GB (AA/A) in Bangladesh',
-    description: 'Buy used iPhone 14 Pro Max 256GB in Bangladesh. Purple colour, 88% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 14 Pro Max, iPhone 14 Pro Max Bangladesh, used iPhone 14 Pro Max Bangladesh, iPhone 14 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 14 Pro Max Purple'
-}
+        }
     },
     {
         id: 8,
@@ -174,47 +62,17 @@ const products = [
         cat: 'Pre-owned Phones',
         img: 'images/products/iphone-15-pro-1.jpg',
         images: [
-            'images/products/iphone-15-pro-1.jpg'
-        ],
-        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
-        specs: {
-            storage: '256gb',
-            variant: 'ZPA/Singapur',
-            color: ' White',
-            box: 'Yes',
-            battery: 'BH-93%',
-            warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 15 Pro 256GB White in Bangladesh',
-    description: 'Buy used iPhone 15 Pro 256GB in Bangladesh. White colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 15 Pro, iPhone 15 Pro Bangladesh, used iPhone 15 Pro Bangladesh, iPhone 15 Pro 256GB Bangladesh, used phone Bangladesh, iPhone 15 Pro White'
-}
-    },
-    {
-        id: 9,
-        name: 'iPhone 15 Pro',
-        cat: 'Pre-owned Phones',
-        img: 'images/products/iphone-15-pro-2.jpg',
-        images: [
+            'images/products/iphone-15-pro-1.jpg',
             'images/products/iphone-15-pro-2.jpg'
         ],
-        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
+        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply). Colour and battery health vary by the unit currently in stock — message us to confirm the exact specs and price.',
         specs: {
             storage: '256GB',
-            variant: 'LLA',
-            color: 'Sierra Blue',
+            color: 'White/Sierra Blue',
+            variant: 'ZPA/Singapore, LLA',
             box: 'Yes',
-            battery: 'BH-96%',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 15 Pro 256GB Sierra Blue in Bangladesh',
-    description: 'Buy used iPhone 15 Pro 256GB in Bangladesh. Sierra Blue colour, 96% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 15 Pro, iPhone 15 Pro Bangladesh, used iPhone 15 Pro Bangladesh, iPhone 15 Pro 256GB Bangladesh, used phone Bangladesh, iPhone 15 Pro Sierra Blue'
-}
+        }
     },
     {
         id: 10,
@@ -232,13 +90,7 @@ const products = [
             box: 'Yes',
             battery: 'BH-86%',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 15 Pro Max 256GB in Bangladesh',
-    description: 'Buy used iPhone 15 Pro Max 256GB in Bangladesh. Natural Titanium colour, 86% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 15 Pro Max, iPhone 15 Pro Max Bangladesh, used iPhone 15 Pro Max Bangladesh, iPhone 15 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 15 Pro Max Natural Titanium'
-}
+        }
     },
     {
         id: 11,
@@ -256,13 +108,7 @@ const products = [
             box: 'Yes',
             battery: 'BH-88%',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 15 Plus 128GB in Bangladesh',
-    description: 'Buy used iPhone 15 Plus 128GB in Bangladesh. China variant, 88% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 15 Plus, iPhone 15 Plus Bangladesh, used iPhone 15 Plus Bangladesh, iPhone 15 Plus 128GB Bangladesh, used phone Bangladesh'
-}
+        }
     },
     {
         id: 12,
@@ -272,49 +118,18 @@ const products = [
         images: [
             'images/products/iphone-16-pro-max-1.jpg'
         ],
-        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
+        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply). Battery health varies by the unit currently in stock — message us to confirm the exact specs and price.',
         specs: {
             storage: '256gb',
-            variant: 'Japan',
             color: 'Desert Titanium',
+            variant: 'Japan, AE/A',
             box: 'Yes',
-            battery: 'BH-92%',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 16 Pro Max 256GB (Japan) in Bangladesh',
-    description: 'Buy used iPhone 16 Pro Max 256GB in Bangladesh. Desert Titanium colour, Japan variant, 92% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 16 Pro Max, iPhone 16 Pro Max Bangladesh, used iPhone 16 Pro Max Bangladesh, iPhone 16 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 16 Pro Max Desert Titanium'
-}
-    },
-    {
-        id: 13,
-        name: 'iPhone 16 Pro Max',
-        cat: 'Pre-owned Phones',
-        img: 'images/products/iphone-16-pro-max-1.jpg',
-        images: [
-            'images/products/iphone-16-pro-max-1.jpg'
-        ],
-        desc: 'Pre-Owned Devices include a 14-Day Instant Replacement Guarantee (conditions apply).',
-        specs: {
-            storage: '256gb',
-            variant: 'AE/A',
-            color: 'Desert Titanium',
-            box: 'Yes',
-            battery: 'BH-88%',
-            warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 16 Pro Max 256GB (AE/A) in Bangladesh',
-    description: 'Buy used iPhone 16 Pro Max 256GB in Bangladesh. Desert Titanium colour, 88% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 16 Pro Max, iPhone 16 Pro Max Bangladesh, used iPhone 16 Pro Max Bangladesh, iPhone 16 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 16 Pro Max Desert Titanium'
-}
+        }
     },
     {
         id: 14,
-        name: 'iPhone 16 Pro Max',
+        name: 'iPhone 16 Pro',
         cat: 'Pre-owned Phones',
         img: 'images/products/iphone-16-pro-1.jpg',
         images: [
@@ -328,13 +143,7 @@ const products = [
             box: 'Yes',
             battery: 'BH-90%',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 16 Pro 128GB in Bangladesh',
-    description: 'Buy used iPhone 16 Pro 128GB in Bangladesh. Sierra Blue colour, 93% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 16 Pro, iPhone 16 Pro Bangladesh, used iPhone 16 Pro Bangladesh, iPhone 16 Pro 128GB Bangladesh, used phone Bangladesh, iPhone 16 Pro Sierra Blue'
-}
+        }
     },
     {
         id: 15,
@@ -351,13 +160,7 @@ const products = [
             color: 'Volcanic Black',
             battery: '5000 MAH',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'Vivo V30 Pro 256GB in Bangladesh',
-    description: 'Buy used Vivo V30 Pro 256GB in Bangladesh. Volcanic Black colour, 8GB RAM, includes a 14-day replacement guarantee.',
-    keywords: 'Vivo V30 Pro, Vivo V30 Pro Bangladesh, used Vivo V30 Pro Bangladesh, Vivo V30 Pro 256GB Bangladesh, used phone Bangladesh, Vivo V30 Pro Volcanic Black'
-}
+        }
     },
     {
         id: 16,
@@ -374,13 +177,7 @@ const products = [
             color: 'Black',
             battery: 'BH-98%',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'Huawei Pura 70 512GB in Bangladesh',
-    description: 'Buy used Huawei Pura 70 512GB in Bangladesh. Black colour, 12GB RAM, 98% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'Huawei Pura 70, Huawei Pura 70 Bangladesh, used Huawei Pura 70 Bangladesh, Huawei Pura 70 512GB Bangladesh, used phone Bangladesh, Huawei Pura 70 Black'
-}
+        }
     },
     {
         id: 17,
@@ -398,13 +195,7 @@ const products = [
             box: 'Yes',
             battery: '5000mah',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'Redmi Note 12 256GB in Bangladesh',
-    description: 'Buy used Redmi Note 12 256GB in Bangladesh. Orange colour, 8GB RAM, includes a 14-day replacement guarantee.',
-    keywords: 'Redmi Note 12, Redmi Note 12 Bangladesh, used Redmi Note 12 Bangladesh, Redmi Note 12 256GB Bangladesh, used phone Bangladesh, Redmi Note 12 Orange'
-}
+        }
     },
     {
         id: 18,
@@ -421,13 +212,7 @@ const products = [
             color: 'Black',
             battery: 'BH-81%',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 12 Pro Max 256GB in Bangladesh',
-    description: 'Buy used iPhone 12 Pro Max 256GB in Bangladesh. Black colour, 81% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 12 Pro Max, iPhone 12 Pro Max Bangladesh, used iPhone 12 Pro Max Bangladesh, iPhone 12 Pro Max 256GB Bangladesh, used phone Bangladesh, iPhone 12 Pro Max Black'
-}
+        }
     },
     {
         id: 19,
@@ -445,13 +230,7 @@ const products = [
             box: 'Yes',
             battery: 'BH-91%',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 17 Pro 256GB in Bangladesh',
-    description: 'Buy used iPhone 17 Pro 256GB in Bangladesh. White colour, 91% battery health, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 17 Pro, iPhone 17 Pro Bangladesh, used iPhone 17 Pro Bangladesh, iPhone 17 Pro 256GB Bangladesh, used phone Bangladesh, iPhone 17 Pro White'
-}
+        }
     },
     {
         id: 20,
@@ -468,13 +247,7 @@ const products = [
             color: 'Black',
             box: 'Yes',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'Nord CE5 256GB in Bangladesh',
-    description: 'Buy used OnePlus Nord CE5 256GB in Bangladesh. Black colour, 8GB RAM, includes a 14-day replacement guarantee.',
-    keywords: 'Nord CE5, Nord CE5 Bangladesh, used Nord CE5 Bangladesh, Nord CE5 256GB Bangladesh, used phone Bangladesh, Nord CE5 Black'
-}
+        }
     },
     {
         id: 21,
@@ -490,13 +263,7 @@ const products = [
             variant: 'Japan',
             color: 'Yellow',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'Google Pixel 7 128GB in Bangladesh',
-    description: 'Buy used Google Pixel 7 128GB in Bangladesh. Yellow colour, Japan variant, includes a 14-day replacement guarantee.',
-    keywords: 'Pixel 7, Google Pixel 7 Bangladesh, used Pixel 7 Bangladesh, Pixel 7 128GB Bangladesh, used phone Bangladesh, Pixel 7 Yellow'
-}
+        }
     },
     {
         id: 22,
@@ -513,13 +280,7 @@ const products = [
             color: 'Black',
             box: 'Yes',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'iPhone 16 128GB in Bangladesh',
-    description: 'Buy used iPhone 16 128GB in Bangladesh. Black colour, Indian variant, includes a 14-day replacement guarantee.',
-    keywords: 'iPhone 16, iPhone 16 Bangladesh, used iPhone 16 Bangladesh, iPhone 16 128GB Bangladesh, used phone Bangladesh, iPhone 16 Black'
-}
+        }
     },
     {
         id: 23,
@@ -536,25 +297,79 @@ const products = [
             color: 'Titanium White',
             box: 'Yes',
             warranty: '14 Day'
-        },
-        // SEO
-        seo: {
-    title: 'Samsung Galaxy S24 Ultra 256GB in Bangladesh',
-    description: 'Buy used Samsung Galaxy S24 Ultra 256GB in Bangladesh. Titanium White colour, TDRA variant, includes a 14-day replacement guarantee.',
-    keywords: 'Samsung Galaxy S24 Ultra, Samsung S24 Ultra Bangladesh, used Samsung S24 Ultra Bangladesh, Samsung S24 Ultra 256GB Bangladesh, used phone Bangladesh, Samsung S24 Ultra Titanium White'
-}
+        }
     },
-// =====================================================
+    // =====================================================
     // 📱 New Phones
     // =====================================================
+    {
+        id: 24,
+        name: 'Google-Pixel-7',
+        cat: 'New Phones',
+        img: 'images/products/Google-Pixel-7.jpg',
+        images: [
+            'images/products/Google-Pixel-7.jpg'
+        ],
+        desc: 'Google Pixel 7 – Featuring a 6.3-inch AMOLED display, 50MP dual camera, Google Tensor G2 chip, and 4355mAh battery with 30W fast charging. Our purpose is to provide accurate information from trusted sources. If you find any errors or inaccuracies, please let us know.',
+        specs: {
+            storage: '128gb',
+            variant: 'USA/Japan',
+            color: 'Yellow/Black',
+        }
+    },
+    {
+        id: 25,
+        name: 'iPhone-15',
+        cat: 'New Phones',
+        img: 'images/products/iPhone-15.jpg',
+        images: [
+            'images/products/iPhone-15.jpg'
+        ],
+        desc: 'Brand new iPhone 15 with the latest features. Our purpose is to provide accurate information from trusted sources. If you find any errors or inaccuracies, please let us know.',
+        specs: {
+            storage: '128gb',
+            variant: 'Indian/TDRA',
+            color: 'Blue',
+        }
+    },
+    {
+        id: 26,
+        name: 'iPhone-17-Pro-Max',
+        cat: 'New Phones',
+        img: 'images/products/iPhone-17-Pro-Max.jpg',
+        images: [
+            'images/products/iPhone-17-Pro-Max.jpg'
+        ],
+        desc: 'Brand new iPhone 17 Pro Max with the latest features. Our purpose is to provide accurate information from trusted sources. If you find any errors or inaccuracies, please let us know.',
+        specs: {
+            storage: '256gb',
+            variant: 'USA/Japan',
+            color: 'Blue/Orange/Silver',
+        }
+    },
+    {
+        id: 27,
+        name: 'Samsung-Galaxy-A57',
+        cat: 'New Phones',
+        img: 'images/products/Samsung-Galaxy-A57.jpg',
+        images: [
+            'images/products/Samsung-Galaxy-A57.jpg'
+        ],
+        desc: 'Brand new Samsung Galaxy A57 with the latest features. Our purpose is to provide accurate information from trusted sources. If you find any errors or inaccuracies, please let us know.',
+        specs: {
+            storage: '128gb/256gb',
+            variant: 'vietnam',
+            color: 'White',
+        }
+    },
     // =====================================================
     // 🔌 ACCESSORIES
     // =====================================================
     {
-        id: 24,
+        id: 28,
         name: 'Apple USB-C Power Adapter (Indian Variant)',
         cat: 'Accessories',
-       img: 'images/products/Apple Orginal.jfif',
+        img: 'images/products/Apple Orginal.jfif',
         images: [
             'images/products/Apple Orginal.jfif',
             'images/products/Apple Orginal2.jfif',
@@ -568,16 +383,10 @@ const products = [
             connector: 'USB-C',
             condition: 'Brand New',
             warranty: '12 Months'
-        },
-        // SEO
-        seo: {
-            title: 'Apple 20W USB-C Power Adapter (Indian Variant) in Bangladesh',
-            description: 'Buy Apple 20W USB-C Power Adapter (Indian Variant) in Bangladesh. Fast charging USB-C power adapter for compatible Apple devices.',
-            keywords: 'Apple 20W charger, Apple USB-C power adapter, Apple charger Bangladesh, 20W fast charger, Apple Indian variant charger'
         }
     },
     {
-        id: 25,
+        id: 29,
         name: 'Apple USB-C Power Adapter (Dubai Variant)',
         cat: 'Accessories',
         img: 'images/products/Apple USB-C Power Adapter.jfif',
@@ -594,16 +403,10 @@ const products = [
             connector: 'USB-C',
             condition: 'Brand New',
             warranty: '12 Months'
-        },
-        // SEO
-        seo: {
-            title: 'Apple 20W USB-C Power Adapter (Dubai Variant) in Bangladesh',
-            description: 'Buy Apple 20W USB-C Power Adapter (Dubai Variant) in Bangladesh. Fast charging USB-C power adapter for compatible Apple devices.',
-            keywords: 'Apple 20W charger, Apple USB-C power adapter, Apple charger Bangladesh, 20W fast charger, Apple Dubai variant charger'
         }
     },
     {
-        id: 26,
+        id: 30,
         name: 'Samsung PD Adapter',
         cat: 'Accessories',
         img: 'images/products/Samsung PD Adapter.jfif',
@@ -620,16 +423,10 @@ const products = [
             connector: 'USB-C',
             condition: 'Brand New',
             warranty: '06 Months'
-        },
-        // SEO
-        seo: {
-            title: 'Samsung 20W PD Adapter in Bangladesh',
-            description: 'Buy Samsung 20W PD Power Adapter in Bangladesh. Fast charging USB-C power adapter for compatible Samsung devices.',
-            keywords: 'Samsung PD adapter, Samsung 20W charger, Samsung charger Bangladesh, 20W fast charger'
         }
     },
     {
-        id: 27,
+        id: 31,
         name: 'Romoss Charger',
         cat: 'Accessories',
         img: 'images/products/Romoss.jpeg',
@@ -646,15 +443,10 @@ const products = [
             connector: 'USB-C',
             condition: 'Brand New',
             warranty: '06 Months'
-        },
-        // SEO
-        seo: {
-            title: 'Romoss 20W Fast Charger in Bangladesh',
-            description: 'Buy Romoss 20W Fast Charger in Bangladesh. Reliable USB-C fast charging adapter for everyday use.',
-            keywords: 'Romoss charger, Romoss fast charger Bangladesh, Romoss adapter, 20W fast charger'
         }
     }
 ];
+
 // =====================================================
 // 📂 CATEGORIES
 // =====================================================
@@ -675,28 +467,42 @@ const categories = [
         label: 'Accessories'
     }
 ];
+
+// =====================================================
+// 🔎 SITE SEO — সবগুলো প্রোডাক্টের জন্য একটাই জায়গা
+// আসল SEO লক্ষ্য হলো "CTG Mobile Tech" ব্র্যান্ড নামটাকে র‍্যাংক করানো,
+// তাই প্রতিটা প্রোডাক্টে আলাদা title/description/keywords লেখার
+// দরকার নেই। নিচের কনফিগটা বদলালেই পুরো সাইটের সব প্রোডাক্ট পেইজে
+// একসাথে আপডেট হয়ে যাবে।
+// =====================================================
+const SITE_BRAND = 'CTG Mobile Tech';
+const SITE_LOCATION = 'Chattogram, Bangladesh';
+const SITE_SEO = {
+    // প্রতিটা প্রোডাক্ট পেইজের মেটা ডেসক্রিপশন এটাই ব্যবহার করবে
+    description: `${SITE_BRAND} — genuine pre-owned and new phones, plus phone accessories in ${SITE_LOCATION}. 14-day replacement guarantee. Call or message us on Facebook for details.`,
+    // প্রতিটা প্রোডাক্ট পেইজের কিওয়ার্ডে শুধু প্রোডাক্টের নাম যোগ হয়ে বসে
+    keywords: `${SITE_BRAND}, mobile shop Chattogram, used iPhone Bangladesh, new phones Bangladesh, phone accessories Chattogram, pre-owned phones Bangladesh`
+};
+
 // =====================================================
 // 🔎 SEO HELPER FUNCTIONS
 // =====================================================
-// Get SEO information for a product
+// Get SEO information for a product — title-এ প্রোডাক্টের নাম বসে
+// (যাতে পেইজগুলো একে অপরের থেকে আলাদা করা যায়), বাকিটা ব্র্যান্ড-কেন্দ্রিক।
 function getProductSEO(product) {
     if (!product) return null;
     return {
-        title: product.seo?.title || `${product.name} in Bangladesh`,
-        description:
-            product.seo?.description ||
-            `Buy ${product.name} in Bangladesh with warranty and fast support.`,
-        keywords:
-            product.seo?.keywords ||
-            `${product.name}, ${product.name} Bangladesh`
+        title: `${product.name} — ${SITE_BRAND} | ${SITE_LOCATION}`,
+        description: SITE_SEO.description,
+        keywords: `${product.name}, ${SITE_SEO.keywords}`
     };
 }
+
 // =====================================================
 // 🏷️ PRODUCT SEO DATA GENERATOR
 // =====================================================
 function getProductStructuredData(product, siteUrl = window.location.origin) {
     if (!product) return null;
-    const seo = getProductSEO(product);
     return {
         "@context": "https://schema.org",
         "@type": "Product",
@@ -705,20 +511,23 @@ function getProductStructuredData(product, siteUrl = window.location.origin) {
         "image": product.images || [product.img],
         "brand": {
             "@type": "Brand",
-            "name": product.brand || "CTG Mobile Tech"
+            "name": SITE_BRAND
         },
         "category": product.cat,
         "sku": String(product.id)
     };
 }
+
 // =====================================================
 // 🧠 UPDATE PAGE SEO
 // =====================================================
 function updateProductSEO(product) {
     if (!product) return;
     const seo = getProductSEO(product);
+
     // Page Title
     document.title = seo.title;
+
     // Meta Description
     let descriptionMeta = document.querySelector('meta[name="description"]');
     if (!descriptionMeta) {
@@ -727,6 +536,7 @@ function updateProductSEO(product) {
         document.head.appendChild(descriptionMeta);
     }
     descriptionMeta.setAttribute('content', seo.description);
+
     // Meta Keywords
     let keywordsMeta = document.querySelector('meta[name="keywords"]');
     if (!keywordsMeta) {
@@ -735,6 +545,7 @@ function updateProductSEO(product) {
         document.head.appendChild(keywordsMeta);
     }
     keywordsMeta.setAttribute('content', seo.keywords);
+
     // Open Graph Title
     let ogTitle = document.querySelector('meta[property="og:title"]');
     if (!ogTitle) {
@@ -743,6 +554,7 @@ function updateProductSEO(product) {
         document.head.appendChild(ogTitle);
     }
     ogTitle.setAttribute('content', seo.title);
+
     // Open Graph Description
     let ogDescription = document.querySelector('meta[property="og:description"]');
     if (!ogDescription) {
@@ -751,6 +563,7 @@ function updateProductSEO(product) {
         document.head.appendChild(ogDescription);
     }
     ogDescription.setAttribute('content', seo.description);
+
     // Open Graph Image
     let ogImage = document.querySelector('meta[property="og:image"]');
     if (!ogImage) {
@@ -759,6 +572,7 @@ function updateProductSEO(product) {
         document.head.appendChild(ogImage);
     }
     ogImage.setAttribute('content', product.img);
+
     // Twitter Card
     let twitterCard = document.querySelector('meta[name="twitter:card"]');
     if (!twitterCard) {
@@ -767,6 +581,7 @@ function updateProductSEO(product) {
         document.head.appendChild(twitterCard);
     }
     twitterCard.setAttribute('content', 'summary_large_image');
+
     // Twitter Title
     let twitterTitle = document.querySelector('meta[name="twitter:title"]');
     if (!twitterTitle) {
@@ -775,6 +590,7 @@ function updateProductSEO(product) {
         document.head.appendChild(twitterTitle);
     }
     twitterTitle.setAttribute('content', seo.title);
+
     // Twitter Description
     let twitterDescription = document.querySelector('meta[name="twitter:description"]');
     if (!twitterDescription) {
@@ -783,6 +599,7 @@ function updateProductSEO(product) {
         document.head.appendChild(twitterDescription);
     }
     twitterDescription.setAttribute('content', seo.description);
+
     // Twitter Image
     let twitterImage = document.querySelector('meta[name="twitter:image"]');
     if (!twitterImage) {
@@ -791,6 +608,7 @@ function updateProductSEO(product) {
         document.head.appendChild(twitterImage);
     }
     twitterImage.setAttribute('content', product.img);
+
     // Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -799,6 +617,7 @@ function updateProductSEO(product) {
         document.head.appendChild(canonical);
     }
     canonical.setAttribute('href', `${window.location.origin}${window.location.pathname}?id=${product.id}`);
+
     // Product Structured Data
     let structuredData = document.getElementById('product-structured-data');
     if (!structuredData) {
@@ -809,12 +628,14 @@ function updateProductSEO(product) {
     }
     structuredData.textContent = JSON.stringify(getProductStructuredData(product));
 }
+
 // =====================================================
 // 🔍 GET PRODUCT BY ID
 // =====================================================
 function getProductById(id) {
     return products.find(product => String(product.id) === String(id));
 }
+
 // =====================================================
 // 📌 AUTO SEO FOR PRODUCT PAGE
 // =====================================================
@@ -828,6 +649,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
 // =====================================================
 // 😊 HAPPY CUSTOMERS (Testimonials)
 // নতুন কাস্টমার রিভিউ যোগ করতে নিচে { } আকারে একটা নতুন এন্ট্রি বসান
@@ -869,6 +691,7 @@ const testimonials = [
         text: 'আরেকজন প্রিয় কাস্টমারের হাতে তুলে দেওয়া হলো তার কাঙ্ক্ষিত স্মার্টফোন। আপনাদের স্বপ্নের ফোন কেনার যাত্রায় পাশে থাকতে পারাই আমাদের আনন্দ। আপনাদের বিশ্বাস ও ভালোবাসাই CTG Mobile Tech-এর সবচেয়ে বড় অর্জন।'
     }
 ];
+
 // =====================================================
 // 🎬 OUR VIDEOS (Facebook Videos/Reels)
 // নতুন ভিডিও যোগ করতে নিচে { } আকারে একটা নতুন এন্ট্রি বসান
